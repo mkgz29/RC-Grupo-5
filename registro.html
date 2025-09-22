@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid p-0">
+            <div class="row g-0 min-vh-100 align-items-stretch">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="assets\img\registro.webp" alt="Foto Registro Izquierda"
+                        class="img-fluid  h-100 w-100 object-fit-cover" />
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="w-100" style="max-width:440px;">
+                        <h1 class="mb-2 text-center">Cree una cuenta</h1>
+                        <form action="#" method="POST" autocomplete="off" novalidate class="text-center">
+                            <fieldset>
+                                <legend>Datos de su cuenta</legend>
+                                <div class="mb-3">
+                                    <input placeholder="Nombre y Apellido" type="text" required name="Nombre" />
+                                </div>
+                                <div class="mb-3">
+                                    <input placeholder="Nombre de usuario" type="text" minlength="3" maxlength="20"
+                                        required name="Usuario" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type=email placeholder="Email" type="text" required name="email" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type=tel inputmode="tel" placeholder="Teléfono" type="text" required
+                                        name="Telefono" />
+                                </div>
+                                <div class="mb-3">
+                                    <input placeholder="Domicilio" type="text" required name="Domicilio" />
+                                </div>
+                                <div class="mb-3">
+                                    <input inputmode="numeric" placeholder="Código postal" type="text" required
+                                        name="Código Postal" />
+                                </div>
+                                <div class="mb-3">
+                                    <input placeholder="Contraseña" type="password" minlength="8" maxlength="10"
+                                        required name="Contraseña" />
+                                </div>
+                                <div class="mb-3">
+                                    <button type="submit">Enviar</button>
+                                </div>
+                            </fieldset>
+                            <p>
+                                <a href="#">Ya tienes una cuenta? Inicia sesión</a><br />
+                                <a href="#">Olvidé mi contraseña</a>
+                            </p>
+                            <p>Al hacer clic en «Enviar», aceptas nuestros Términos de servicio y nuestra Política de
+                                privacidad.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

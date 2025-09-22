@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,14 +12,14 @@
 <body>
     <main>
         <div class="container-fluid p-0">
-            <div class="row g-0 min-vh-100 align-items-stretch">
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-                    <img src="assets\img\registro.webp" alt="Foto Registro Izquierda"
-                        class="img-fluid  h-100 w-100 object-fit-cover" />
+            <div class="row g-0 min-vh-100 align-items-stretch"> 
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"> <!--Columna Izquierda-->
+                    <img src="assets/img/registro.webp" alt="Foto Registro Izquierda"
+                        class="img-fluid h-100 w-100 object-fit-cover" /> <!--Revisar tamaño de la imagen o codigo-->
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-                    <div class="w-100" style="max-width:440px;">
-                        <h1 class="mb-2 text-center">Cree una cuenta</h1>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"> <!--Columna Derecha-->
+                    <div class="w-100">
+                        <h1 class="mb-2 text-center">Cree una cuenta</h1> <!--No tienen el estilo de Bootstrap de un formalario-->
                         <form action="#" method="POST" autocomplete="off" novalidate class="text-center">
                             <fieldset>
                                 <legend>Datos de su cuenta</legend>
@@ -31,10 +31,10 @@
                                         required name="Usuario" />
                                 </div>
                                 <div class="mb-3">
-                                    <input type=email placeholder="Email" type="text" required name="email" />
+                                    <input type="email" placeholder="Email" type="text" required name="email" />
                                 </div>
                                 <div class="mb-3">
-                                    <input type=tel inputmode="tel" placeholder="Teléfono" type="text" required
+                                    <input type="tel" inputmode="tel" placeholder="Teléfono" type="text" required
                                         name="Telefono" />
                                 </div>
                                 <div class="mb-3">
@@ -56,8 +56,10 @@
                                 <a href="#">Ya tienes una cuenta? Inicia sesión</a><br />
                                 <a href="#">Olvidé mi contraseña</a>
                             </p>
-                            <p>Al hacer clic en «Enviar», aceptas nuestros Términos de servicio y nuestra Política de
-                                privacidad.
+                            <p>
+                                Al hacer clic en «Enviar», aceptas nuestros
+                                <a href="#">Términos de servicio</a> y nuestra
+                                <a href="#">Política de privacidad</a>.
                             </p>
                         </form>
                     </div>
@@ -67,8 +69,8 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

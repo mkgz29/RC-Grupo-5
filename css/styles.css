@@ -5,8 +5,24 @@
     font-size: 6rem;
 }
 
+
+/* NAVBAR */    
+
+.susbrayado {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(0, 136, 255, 0.677);
+}
+
+.susbrayado:hover {
+    color: rgba(0, 136, 255, 0.677);
+    text-decoration: underline;
+    padding-left: 10px;
+}
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
@@ -30,11 +46,21 @@ hr {
     cursor: pointer;
 }
 
-
+/* CARD INICIO */
+/* .card{display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .cardbutton{
+        background-color: rgba(0, 136, 255, 0.677);
+        border-color: rgba(0, 136, 255, 0.677);
+    }
+} */
 
 /* FOOTER */
 footer {
-    border-top: 3px solid #dc3545;
+    border-top: 3px solid rgba(0, 136, 255, 0.677);
 }
 
 footer .social-links a {
@@ -43,7 +69,7 @@ footer .social-links a {
 
 footer .social-links a:hover {
 
-    color: #dc3545 !important;
+    color: rgba(0, 136, 255, 0.677) !important;
     transform: scale(1.1);
 }
 
@@ -52,19 +78,19 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    text-shadow: #dc3545 1px 1px 5px;
-    color: #dc3545 !important;
+    text-shadow: rgba(0, 136, 255, 0.677) 1px 1px 5px;
+    color: rgba(0, 136, 255, 0.677) !important;
     padding-left: 10px;
 }
 
-footer .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
+footer .btn-primary {
+    background-color: rgba(0, 136, 255, 0.677);
+    border-color: rgba(0, 136, 255, 0.677);
 }
 
 footer .btn-danger:hover {
-    background-color: #b02a37;
-    border-color: #b02a37;
+    background-color: rgba(0, 136, 255, 0.677);
+    border-color: rgba(0, 136, 255, 0.677);
     transform: scale(1.05);
 }
 

@@ -12,51 +12,74 @@
 <body>
     <main>
         <div class="container-fluid p-0">
-            <div class="row g-0 min-vh-100 align-items-stretch"> 
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"> <!--Columna Izquierda-->
-                    <img src="assets/img/registro.webp" alt="Foto Registro Izquierda"
-                        class="img-fluid h-100 w-100 object-fit-cover" /> <!--Revisar tamaño de la imagen o codigo-->
+            <div class="row g-0 min-vh-100 align-items-stretch">
+                <div class="col-12 col-md-6 img-col d-none d-md-block p-0">
+                    <!--Columna Izquierda-->
+                    <img src="assets/img/foto2.jpg" alt="Persona estudiando cursos"
+                        class="img-fluid h-100 w-100 object-fit-cover" />
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"> <!--Columna Derecha-->
-                    <div class="w-100">
-                        <h1 class="mb-2 text-center">Cree una cuenta</h1> <!--No tienen el estilo de Bootstrap de un formalario-->
-                        <form action="#" method="POST" autocomplete="off" novalidate class="text-center">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center bg-dark text-light p-4">
+                    <!--Columna Derecha-->
+                    <div class="w-100 text-center">
+                        <p class="mb-2 text-center text-white fs-2">
+                            Aprenda nuevas habilidades con nuestros cursos
+                        </p>
+                        <form action="#" method="POST" autocomplete="on" class="p-1">
                             <fieldset>
-                                <legend>Datos de su cuenta</legend>
-                                <div class="mb-3">
-                                    <input placeholder="Nombre y Apellido" type="text" required name="Nombre" />
+                                <legend class="col-form-label mb-2 text-center text-white fst-italic">
+                                    Registrese llenando el siguiente formulario
+                                </legend>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput1"
+                                        name="Nombre_y_Apellido" placeholder="Ingresa tu nombre completo"
+                                        autocomplete="name" required />
+                                    <label for="floatingInput1">Nombre y Apellido</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput2"
+                                        name="Nombre_de_Usuario" minlength="3" maxlength="20"
+                                        placeholder="Ingresa tu Nombre de Usuario" required />
+                                    <label for="floatingInput2">Nombre de Usuario</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput3" name="Email"
+                                        placeholder="Ejemplo@mail.com" required />
+                                    <label for="floatingInput3">Email</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control rounded-3" id="floatingInput4"
+                                        name="Número_de_Telefono" placeholder="Número de Teléfono" inputmode="tel"
+                                        required />
+                                    <label for="floatingInput4">Número de Teléfono (Ej. +54 9 11 1234 5678)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput5"
+                                        name="Calle_y_número_de_domicilio" placeholder="" required />
+                                    <label for="floatingInput5">Calle y número de domicilio</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput6" name="Código_Postal"
+                                        placeholder="Código Postal" inputmode="numeric" required />
+                                    <label for="floatingInput6">Código Postal</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingInput7" name="Contraseña"
+                                        minlength="8" maxlength="25" placeholder="Contraseña" required />
+                                    <label for="floatingInput7">Contraseña (Min. 8 Caracteres)</label>
                                 </div>
                                 <div class="mb-3">
-                                    <input placeholder="Nombre de usuario" type="text" minlength="3" maxlength="20"
-                                        required name="Usuario" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" placeholder="Email" type="text" required name="email" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" inputmode="tel" placeholder="Teléfono" type="text" required
-                                        name="Telefono" />
-                                </div>
-                                <div class="mb-3">
-                                    <input placeholder="Domicilio" type="text" required name="Domicilio" />
-                                </div>
-                                <div class="mb-3">
-                                    <input inputmode="numeric" placeholder="Código postal" type="text" required
-                                        name="Código Postal" />
-                                </div>
-                                <div class="mb-3">
-                                    <input placeholder="Contraseña" type="password" minlength="8" maxlength="10"
-                                        required name="Contraseña" />
-                                </div>
-                                <div class="mb-3">
-                                    <button type="submit">Enviar</button>
+                                    <button class="btn btn-lg w-100 btn-light" type="submit">
+                                        Enviar
+                                    </button>
                                 </div>
                             </fieldset>
-                            <p>
-                                <a href="#">Ya tienes una cuenta? Inicia sesión</a><br />
+                            <p class="mb-2">
+                                ¿Ya tienes una cuenta?<a class="p-2" href="#">Inicia sesión</a><br />
+                            </p>
+                            <p class="mb-2">
                                 <a href="#">Olvidé mi contraseña</a>
                             </p>
-                            <p>
+                            <p class="mt-3 small fs-4 fst-italic">
                                 Al hacer clic en «Enviar», aceptas nuestros
                                 <a href="#">Términos de servicio</a> y nuestra
                                 <a href="#">Política de privacidad</a>.
@@ -67,7 +90,6 @@
             </div>
         </div>
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

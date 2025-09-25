@@ -1,0 +1,48 @@
+ /* Custom CSS for specific design elements */
+ :root {
+   --header-bg: #6c7b8a;
+   --page-title-bg: #9ca3af;
+   --primary-blue: #6366f1;
+ }
+
+ .header-custom {
+   background-color: var(--header-bg) !important;
+ }
+
+ .page-title-custom {
+   background-color: var(--page-title-bg) !important;
+ }
+
+ .btn-primary-custom {
+   background-color: var(--primary-blue);
+   border-color: var(--primary-blue);
+ }
+
+ .btn-primary-custom:hover {
+   background-color: #5338f5;
+   border-color: #5338f5;
+ }
+
+ .product-image-placeholder {
+   background-color: #e5e7eb;
+   color: #9ca3af;
+   font-size: 1.5rem;
+ }
+
+ .cart-badge-custom {
+   top: -8px;
+   right: -8px;
+   background-color: var(--primary-blue);
+ }
+
+ .container-main {
+   max-width: 400px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
+
+ @media (min-width: 768px) {
+   .container-main {
+     max-width: 100%;
+     box-shadow: none;
+   }
+ }

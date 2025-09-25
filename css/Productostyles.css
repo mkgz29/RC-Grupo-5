@@ -3,8 +3,8 @@
    --bs-heading-font-family: 'Orbitron', sans-serif;
    --bs-body-font-size: 1rem;
    --bs-body-line-height: 1.5;
-   --bs-body-color: #212529;
-   --bs-body-bg: #fff;
+   --bs-body-color: #2B2929;
+   --bs-body-bg: #FAF9F6;
  }
 h1 strong {
   color: #3A86FF;
@@ -18,8 +18,14 @@ h1 strong {
    align-items: center;
    justify-content: center;
    border-radius: .5rem;
+   overflow: hidden;
  }
 
+ .product-image img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover;
+ }
  .product-image i {
    font-size: 2.5rem;
    color: #adb5bd;
@@ -53,9 +59,8 @@ h1 strong {
         @media (min-width: 992px) {
           .product-image {
             height: 300px;
-            max-width: 80%;
-            margin: 0 auto 1rem 0;
-            /* Alineada a la izquierda */
+            max-width: 100%;
+            margin: 0 auto 1rem auto;
             display: block;
           }
         }

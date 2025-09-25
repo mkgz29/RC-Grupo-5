@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Producto | Gandalf's Bookstore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/RC-Grupo-5/css/Productostyles.css">
+</head>
+<body class="d-flex flex-column vh-100">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom flex-shrink-0">
+    <div class="container">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand fw-bold mx-auto" href="#">NAVBAR</a>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-link d-lg-none" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="btn btn-link d-none d-lg-block" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container-fluid flex-grow-1 d-flex align-items-center py-3">
+    <div class="container">
+      <div class="row g-4 h-100">
+        <!-- Product Info + Price Column (50% Desktop) -->
+        <div class="col-12 col-lg-6 h-100 d-flex flex-column">
+          <div class="bg-light p-4 rounded flex-grow-1 d-flex flex-column">
+            <h1 class="mb-1"><strong>HTML+CSS</strong> 
+              <br>All Inclusive</h1>
+            <div class="text-muted small mb-2">By Julián Alvarez</div>
+            <span class="badge badge-custom mb-2">Más Pedido</span>
+            <div class="mb-3">
+              <span class="text-warning">
+                &#9733;&#9733;&#9733;&#9733;&#9734;
+              </span>
+              <span class="ms-2 small text-muted">4/5</span>
+            </div>
+            <div class="product-image mb-3 flex-shrink-0">
+              <img src="/Producto/IMG/html+css.jpg" alt="HTML+CSS ALL INCLUSIVE" class="img-fluid w-100 h-100">
+            </div>
+            
+            <!-- Description -->
+            <div class="mb-3 flex-grow-1">
+              <h6 class="fw-bold mb-2">Qué aprenderás?</h6>
+              <p class="mb-0 small">
+                Este curso te va a volar la peluca! 
+                Aprenderás desde cero todo lo necesario para convertirte en un experto en HTML.
+              </p>
+            </div>
+            
+            <!-- Price Box - Always here in this column -->
+            <div class="price-box mt-auto">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fs-3 text-danger fw-bold">$12.000 ARS</span>
+              </div>
+              <button class="btn btn-primary buy-btn">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments Section (40% Desktop - Large Carousel) -->
+        <div class="col-12 col-lg-5 offset-lg-1 h-100">
+          <div class="h-100 d-flex flex-column">
+            <h5 class="fw-bold mb-3">Resultados Reales!</h5>
+            <div id="comentariosCarousel" class="carousel slide bg-white border rounded p-4 comments-large flex-grow-1" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+              <!-- Comentario 1 -->
+              <div class="carousel-item active h-100">
+                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
+                  <div class="comentario-avatar-large mx-auto mb-3">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b1bf?w=100&h=100&fit=crop&crop=face" alt="Ana" class="w-100 h-100 rounded-circle">
+                  </div>
+                  <div>
+                    <p class="fs-5 mb-3 fst-italic">"Excelente libro, muy recomendado para principiantes. Me ayudó muchísimo a entender los conceptos básicos."</p>
+                    <h6 class="text-muted mb-2">— Ana García</h6>
+                    <div class="text-warning">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comentario 2 -->
+              <div class="carousel-item h-100">
+                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
+                  <div class="comentario-avatar-large mx-auto mb-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Luis" class="w-100 h-100 rounded-circle">
+                  </div>
+                  <div>
+                    <p class="fs-5 mb-3 fst-italic">"Me ayudó a entender HTML de forma sencilla. Muy bien explicado y con buenos ejemplos prácticos."</p>
+                    <h6 class="text-muted mb-2">— Luis Rodríguez</h6>
+                    <div class="text-warning">
+                      &#9733;&#9733;&#9733;&#9733;&#9734;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comentario 3 -->
+              <div class="carousel-item h-100">
+                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
+                  <div class="comentario-avatar-large mx-auto mb-3">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Marta" class="w-100 h-100 rounded-circle">
+                  </div>
+                  <div>
+                    <p class="fs-5 mb-3 fst-italic">"Contenido claro y bien explicado. Perfecto para comenzar en el mundo del desarrollo web."</p>
+                    <h6 class="text-muted mb-2">— Marta Silva</h6>
+                    <div class="text-warning">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
+              <i class="bi bi-chevron-left text-dark fs-1"></i>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
+              <i class="bi bi-chevron-right text-dark fs-1"></i>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    FOOTER
+  </footer>
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

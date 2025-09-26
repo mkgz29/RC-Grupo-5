@@ -46,3 +46,69 @@
      box-shadow: none;
    }
  }
+
+/* ========================================= */
+/* AJUSTES DE MEJORA UX Y RESPONSIVE        */
+/* ========================================= */
+
+/* Tipografía y respiración visual */
+body { 
+  scroll-behavior: smooth; 
+}
+
+.card { 
+  border-radius: 12px; 
+}
+
+img.rounded { 
+  border-radius: 8px; 
+}
+
+/* Botones más cómodos en mobile */
+@media (max-width: 575.98px) {
+  .btn { 
+    padding: .6rem .9rem; 
+  }
+}
+
+/* Hover en filas (solo escritorio) */
+@media (min-width: 768px) {
+  table tbody tr:hover {
+    background: #f8f9fa;
+    transition: background-color 0.15s ease-in-out;
+  }
+}
+
+/* Fix para el aside pegado sin invadir el header */
+@media (min-width: 992px) {
+  .position-sticky {
+    top: 6rem !important; /* debajo del navbar sticky */
+  }
+}
+
+/* Mejoras adicionales para UX */
+.course-image-placeholder {
+  transition: transform 0.2s ease-in-out;
+}
+
+.course-image-placeholder:hover {
+  transform: scale(1.05);
+}
+
+/* Animación suave para botones de eliminar */
+.btn-outline-danger:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mejorar el espaciado en mobile */
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+}

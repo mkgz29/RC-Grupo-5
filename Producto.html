@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/RC-Grupo-5/css/Productostyles.css">
 </head>
-<body class="d-flex flex-column vh-100">
+<body class="d-flex flex-column min-vh-100">
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom flex-shrink-0">
     <div class="container">
@@ -27,111 +27,188 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container-fluid flex-grow-1 d-flex align-items-center py-3">
+  <main class="container-fluid flex-grow-1 py-4 main-content">
     <div class="container">
-      <div class="row g-4 h-100">
-        <!-- Product Info + Price Column (50% Desktop) -->
-        <div class="col-12 col-lg-6 h-100 d-flex flex-column">
-          <div class="bg-light p-4 rounded flex-grow-1 d-flex flex-column">
-            <h1 class="mb-1"><strong>HTML+CSS</strong> 
-              <br>All Inclusive</h1>
-            <div class="text-muted small mb-2">By Julián Alvarez</div>
-            <span class="badge badge-custom mb-2">Más Pedido</span>
-            <div class="mb-3">
-              <span class="text-warning">
-                &#9733;&#9733;&#9733;&#9733;&#9734;
-              </span>
-              <span class="ms-2 small text-muted">4/5</span>
+      <div class="row g-4 content-row">
+        
+        <!-- Columna Izquierda: Imagen + Precio -->
+        <div class="col-12 col-lg-6 left-column">
+          <!-- Imagen + Info del Producto (70% altura) -->
+          <div class="product-main-section">
+            <div class="bg-light p-4 rounded h-100 d-flex flex-column">
+              <h1 class="mb-1"><strong>HTML+CSS</strong> 
+                <br>All Inclusive</h1>
+              <div class="text-muted small mb-2">By Julián Alvarez</div>
+              <span class="badge badge-custom mb-2">Más Pedido</span>
+              <div class="mb-3">
+                <span class="text-warning">
+                  &#9733;&#9733;&#9733;&#9733;&#9734;
+                </span>
+                <span class="ms-2 small text-muted">4/5</span>
+              </div>
+              <div class="product-image flex-grow-1">
+                <img src="/IMG/html+css.jpeg" alt="HTML+CSS ALL INCLUSIVE" class="img-fluid w-100 h-100">
+              </div>
             </div>
-            <div class="product-image mb-3 flex-shrink-0">
-              <img src="/IMG/html+css.jpeg" alt="HTML+CSS ALL INCLUSIVE" class="img-fluid w-100 h-100">
-            </div>
-            
-            <!-- Description -->
-            <div class="mb-3 flex-grow-1">
-              <h6 class="fw-bold mb-2">¿Qué aprenderás?</h6>
-              <p class="mb-0 small">
-                Este curso te va a ayudar a dar tus primeros pasos en el desarrollo web.
-                Aprenderás desde cero todo lo necesario para convertirte en un experto en HTML y CSS.
-              </p>
-            </div>
-            
-            <!-- Price Box - Always here in this column -->
-            <div class="price-box mt-auto">
-              <div class="d-flex justify-content-between align-items-center mb-2">
+          </div>
+          
+          <!-- Precio (30% altura) -->
+          <div class="price-main-section">
+            <div class="price-box h-100 d-flex flex-column justify-content-center">
+              <div class="d-flex justify-content-between align-items-center mb-3">
                 <span class="fs-3 text-danger fw-bold">$12.000 ARS</span>
               </div>
-              <button class="btn btn-primary buy-btn">Comprar</button>
+              <button class="btn btn-primary buy-btn">Comprar Ahora</button>
             </div>
           </div>
         </div>
 
-        <!-- Comments Section (40% Desktop - Large Carousel) -->
-        <div class="col-12 col-lg-5 offset-lg-1 h-100">
-          <div class="h-100 d-flex flex-column">
-            <!--<h5 class="fw-bold mb-3">¡Resultados Reales!</h5>-->
-            <div id="comentariosCarousel" class="carousel slide bg-white border rounded p-4 comments-large flex-grow-1" data-bs-ride="carousel">
-            <div class="carousel-inner h-100">
-              <!-- Comentario 1 -->
-              <div class="carousel-item active h-100">
-                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
-                  <div class="comentario-avatar-large mx-auto mb-3">
-                    <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana" class="w-100 h-100 rounded-circle">
-                  </div>
-                  <div>
-                    <p class="fs-5 mb-3 fst-italic">"Excelente libro, muy recomendado para principiantes. Me ayudó muchísimo a entender los conceptos básicos."</p>
-                    <h6 class="text-muted mb-2">— Ana García</h6>
-                    <div class="text-warning">
-                      &#9733;&#9733;&#9733;&#9733;&#9733;
-                    </div>
-                  </div>
+        <!-- Columna Derecha: Descripción Completa + Comentarios -->
+        <div class="col-12 col-lg-6 right-column">
+          <!-- Descripción Completa con Specs y Badges (60% altura) -->
+          <div class="description-main-section">
+            <div class="description-complete-card h-100">
+              <h4><i class="bi bi-info-circle me-2"></i>Descripción del Curso</h4>
+              
+              <!-- Descripción Principal -->
+              <p class="description-text">
+                Este curso te va a <span class="highlight">volar la peluca!</span> 
+                Aprenderás desde cero todo lo necesario para convertirte en un experto en HTML y CSS.
+              </p>
+              <p class="description-text">
+                <strong>Incluye:</strong> 50+ videos, ejercicios prácticos, proyectos reales y certificado de finalización.
+                <span class="highlight">¡Todo lo que necesitas para comenzar tu carrera web!</span>
+              </p>
+              
+              <!-- Separador -->
+              <hr class="my-3">
+              
+              <!-- Especificaciones Compactas -->
+              <div class="specs-compact mb-3">
+                <div class="specs-row">
+                  <span class="spec-item-compact">
+                    <i class="bi bi-clock text-primary me-1"></i><strong>8 horas</strong>
+                  </span>
+                  <span class="spec-item-compact">
+                    <i class="bi bi-book text-success me-1"></i><strong>50+ lecciones</strong>
+                  </span>
+                  <span class="spec-item-compact">
+                    <i class="bi bi-mortarboard text-info me-1"></i><strong>Principiante</strong>
+                  </span>
+                </div>
+                <div class="specs-row">
+                  <span class="spec-item-compact">
+                    <i class="bi bi-globe text-warning me-1"></i><strong>Español</strong>
+                  </span>
+                  <span class="spec-item-compact">
+                    <i class="bi bi-phone text-purple me-1"></i><strong>Mobile/Desktop</strong>
+                  </span>
+                  <span class="spec-item-compact">
+                    <i class="bi bi-download text-secondary me-1"></i><strong>Material incluido</strong>
+                  </span>
                 </div>
               </div>
               
-              <!-- Comentario 2 -->
-              <div class="carousel-item h-100">
-                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
-                  <div class="comentario-avatar-large mx-auto mb-3">
-                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis" class="w-100 h-100 rounded-circle">
-                  </div>
-                  <div>
-                    <p class="fs-5 mb-3 fst-italic">"Me ayudó a entender HTML de forma sencilla. Muy bien explicado y con buenos ejemplos prácticos."</p>
-                    <h6 class="text-muted mb-2">— Luis Rodríguez</h6>
-                    <div class="text-warning">
-                      &#9733;&#9733;&#9733;&#9733;&#9734;
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!-- Separador -->
+              <hr class="my-3">
               
-              <!-- Comentario 3 -->
-              <div class="carousel-item h-100">
-                <div class="comentario-item-large text-center h-100 d-flex flex-column justify-content-center">
-                  <div class="comentario-avatar-large mx-auto mb-3">
-                    <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta" class="w-100 h-100 rounded-circle">
-                  </div>
-                  <div>
-                    <p class="fs-5 mb-3 fst-italic">"Contenido claro y bien explicado. Perfecto para comenzar en el mundo del desarrollo web."</p>
-                    <h6 class="text-muted mb-2">— Marta Silva</h6>
-                    <div class="text-warning">
-                      &#9733;&#9733;&#9733;&#9733;&#9733;
-                    </div>
-                  </div>
+              <!-- Badges Compactos -->
+              <div class="badges-compact">
+                <div class="badges-row">
+                  <span class="badge-compact bg-success">
+                    <i class="bi bi-check-circle me-1"></i>Certificado oficial
+                  </span>
+                  <span class="badge-compact bg-primary">
+                    <i class="bi bi-infinity me-1"></i>Acceso de por vida
+                  </span>
+                  <span class="badge-compact bg-warning">
+                    <i class="bi bi-shield-check me-1"></i>Garantía 30 días
+                  </span>
+                </div>
+                <div class="badges-row">
+                  <span class="badge-compact bg-info">
+                    <i class="bi bi-people me-1"></i>Comunidad exclusiva
+                  </span>
+                  <span class="badge-compact bg-secondary">
+                    <i class="bi bi-headset me-1"></i>Soporte técnico
+                  </span>
+                  <span class="badge-compact bg-danger">
+                    <i class="bi bi-bullseye me-1"></i>Proyectos prácticos
+                  </span>
                 </div>
               </div>
             </div>
-            
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
-              <i class="bi bi-chevron-left text-dark fs-1"></i>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
-              <i class="bi bi-chevron-right text-dark fs-1"></i>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
+          </div>
+          
+          <!-- Comentarios Compactos (40% altura) -->
+          <div class="comments-main-section">
+            <div class="comments-compact-section h-100">
+              <h6 class="comments-title"><i class="bi bi-chat-heart me-2"></i>¡Resultados Reales!</h6>
+              <div id="comentariosCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-inner h-100">
+                  <!-- Comentario 1 -->
+                  <div class="carousel-item active h-100">
+                    <div class="d-flex flex-column justify-content-center h-100 text-center">
+                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
+                        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana" class="w-100 h-100 rounded-circle">
+                      </div>
+                      <div>
+                        <p class="mb-3 fst-italic">"Excelente curso, muy recomendado para principiantes. Me ayudó muchísimo a entender los conceptos básicos."</p>
+                        <h6 class="text-muted mb-2">— Ana García</h6>
+                        <div class="text-warning">
+                          &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Comentario 2 -->
+                  <div class="carousel-item h-100">
+                    <div class="d-flex flex-column justify-content-center h-100 text-center">
+                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis" class="w-100 h-100 rounded-circle">
+                      </div>
+                      <div>
+                        <p class="mb-3 fst-italic">"Me ayudó a entender HTML de forma sencilla. Muy bien explicado y con buenos ejemplos prácticos."</p>
+                        <h6 class="text-muted mb-2">— Luis Rodríguez</h6>
+                        <div class="text-warning">
+                          &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Comentario 3 -->
+                  <div class="carousel-item h-100">
+                    <div class="d-flex flex-column justify-content-center h-100 text-center">
+                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
+                        <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta" class="w-100 h-100 rounded-circle">
+                      </div>
+                      <div>
+                        <p class="mb-3 fst-italic">"Contenido claro y bien explicado. Perfecto para comenzar en el mundo del desarrollo web."</p>
+                        <h6 class="text-muted mb-2">— Marta Silva</h6>
+                        <div class="text-warning">
+                          &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
+                  <i class="bi bi-chevron-left text-dark fs-4"></i>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
+                  <i class="bi bi-chevron-right text-dark fs-4"></i>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
   </main>

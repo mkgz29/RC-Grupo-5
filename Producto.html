@@ -136,20 +136,8 @@
               <!-- Separador -->
               <hr class="section-divider">
               
-              <!-- Contenido adicional para demostrar scroll -->
-              <div class="additional-content">
-                <h6 class="section-subtitle mb-3">¿Qué Aprenderás?</h6>
-                <ul class="learning-objectives">
-                  <li>🏗️ Estructura HTML semántica y accesible</li>
-                  <li>🎨 CSS moderno: Flexbox, Grid y Responsive Design</li>
-                  <li>📱 Desarrollo Mobile-First y Progressive Enhancement</li>
-                  <li>🔧 Herramientas de desarrollo y debugging</li>
-                  <li>🚀 Optimización y mejores prácticas</li>
-                  <li>💼 Proyectos del mundo real para tu portfolio</li>
-                  <li>🎯 SEO básico y performance web</li>
-                  <li>🔍 Metodologías CSS: BEM, SCSS y CSS Variables</li>
-                </ul>
-                
+              <!-- Información visible: Requisitos -->
+              <div class="visible-content">
                 <h6 class="section-subtitle mb-3 mt-4">Requisitos</h6>
                 <ul class="requirements-list">
                   <li>💻 Computadora con acceso a internet</li>
@@ -157,51 +145,109 @@
                   <li>⏰ Dedicar 2-3 horas por semana</li>
                   <li>📝 Editor de código (recomendamos VS Code)</li>
                 </ul>
-                
-                <h6 class="section-subtitle mb-3 mt-4">Temario Detallado</h6>
-                <div class="course-syllabus">
-                  <h6>Módulo 1: Fundamentos de HTML</h6>
-                  <ul>
-                    <li>🏷️ Estructura básica de un documento HTML</li>
-                    <li>📋 Elementos semánticos: header, nav, main, section, article</li>
-                    <li>🔗 Enlaces y navegación</li>
-                    <li>🖼️ Imágenes y multimedia</li>
-                    <li>📝 Formularios y validación</li>
-                  </ul>
-                  
-                  <h6>Módulo 2: CSS Básico</h6>
-                  <ul>
-                    <li>🎨 Selectores y especificidad</li>
-                    <li>📏 Box Model y posicionamiento</li>
-                    <li>🌈 Colores y tipografías</li>
-                    <li>🎯 Pseudo-clases y pseudo-elementos</li>
-                  </ul>
-                  
-                  <h6>Módulo 3: Layouts Modernos</h6>
-                  <ul>
-                    <li>📐 Flexbox en profundidad</li>
-                    <li>🔲 CSS Grid Layout</li>
-                    <li>📱 Responsive Design y Media Queries</li>
-                    <li>🎪 Animaciones y transiciones</li>
-                  </ul>
-                </div>
+              </div>
 
-                <h6 class="section-subtitle mb-3 mt-4">Proyectos Incluidos</h6>
-                <div class="projects-list">
-                  <div class="project-item">
-                    <h6>🌐 Proyecto 1: Landing Page Personal</h6>
-                    <p>Crea tu primera página web personal con HTML semántico y CSS moderno</p>
-                  </div>
+              <!-- Separador -->
+              <hr class="section-divider">
+
+              <!-- Sección de Acordeones -->
+              <div class="accordion-section">
+                <div class="accordion" id="courseAccordion">
                   
-                  <div class="project-item">
-                    <h6>🛍️ Proyecto 2: Tienda Online</h6>
-                    <p>Desarrolla una tienda virtual responsiva usando Flexbox y Grid</p>
+                  <!-- Acordeón 1: ¿Qué Aprenderás? -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingLearning">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">
+                        <i class="bi bi-mortarboard me-2"></i>
+                        <strong>¿Qué Aprenderás?</strong>
+                      </button>
+                    </h2>
+                    <div id="collapseLearning" class="accordion-collapse collapse" aria-labelledby="headingLearning" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <ul class="learning-objectives">
+                          <li>🏗️ Estructura HTML semántica y accesible</li>
+                          <li>🎨 CSS moderno: Flexbox, Grid y Responsive Design</li>
+                          <li>📱 Desarrollo Mobile-First y Progressive Enhancement</li>
+                          <li>🔧 Herramientas de desarrollo y debugging</li>
+                          <li>🚀 Optimización y mejores prácticas</li>
+                          <li>💼 Proyectos del mundo real para tu portfolio</li>
+                          <li>🎯 SEO básico y performance web</li>
+                          <li>🔍 Metodologías CSS: BEM, SCSS y CSS Variables</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div class="project-item">
-                    <h6>📰 Proyecto 3: Blog Responsivo</h6>
-                    <p>Construye un blog completamente responsivo con navegación avanzada</p>
+
+                  <!-- Acordeón 2: Temario Detallado -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSyllabus">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSyllabus" aria-expanded="false" aria-controls="collapseSyllabus">
+                        <i class="bi bi-book me-2"></i>
+                        <strong>Temario Detallado</strong>
+                      </button>
+                    </h2>
+                    <div id="collapseSyllabus" class="accordion-collapse collapse" aria-labelledby="headingSyllabus" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <div class="course-syllabus">
+                          <h6>Módulo 1: Fundamentos de HTML</h6>
+                          <ul>
+                            <li>🏷️ Estructura básica de un documento HTML</li>
+                            <li>📋 Elementos semánticos: header, nav, main, section, article</li>
+                            <li>🔗 Enlaces y navegación</li>
+                            <li>🖼️ Imágenes y multimedia</li>
+                            <li>📝 Formularios y validación</li>
+                          </ul>
+                          
+                          <h6>Módulo 2: CSS Básico</h6>
+                          <ul>
+                            <li>🎨 Selectores y especificidad</li>
+                            <li>📏 Box Model y posicionamiento</li>
+                            <li>🌈 Colores y tipografías</li>
+                            <li>🎯 Pseudo-clases y pseudo-elementos</li>
+                          </ul>
+                          
+                          <h6>Módulo 3: Layouts Modernos</h6>
+                          <ul>
+                            <li>📐 Flexbox en profundidad</li>
+                            <li>🔲 CSS Grid Layout</li>
+                            <li>📱 Responsive Design y Media Queries</li>
+                            <li>🎪 Animaciones y transiciones</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Acordeón 3: Proyectos Incluidos -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingProjects">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects">
+                        <i class="bi bi-code-slash me-2"></i>
+                        <strong>Proyectos Incluidos</strong>
+                      </button>
+                    </h2>
+                    <div id="collapseProjects" class="accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <div class="projects-list">
+                          <div class="project-item">
+                            <h6>🌐 Proyecto 1: Landing Page Personal</h6>
+                            <p>Crea tu primera página web personal con HTML semántico y CSS moderno</p>
+                          </div>
+                          
+                          <div class="project-item">
+                            <h6>🛍️ Proyecto 2: Tienda Online</h6>
+                            <p>Desarrolla una tienda virtual responsiva usando Flexbox y Grid</p>
+                          </div>
+                          
+                          <div class="project-item">
+                            <h6>📰 Proyecto 3: Blog Responsivo</h6>
+                            <p>Construye un blog completamente responsivo con navegación avanzada</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

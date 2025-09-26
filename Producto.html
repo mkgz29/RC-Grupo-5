@@ -3,213 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalle de Producto | Gandalf's Bookstore</title>
+  <title>Detalle de Producto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/RC-Grupo-5/css/Productostyles.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom flex-shrink-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom flex-shrink-0 navbar-custom">
     <div class="container">
-      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand fw-bold mx-auto" href="#">NAVBAR</a>
-      <div class="d-flex align-items-center">
-        <button class="btn btn-link d-lg-none" type="button">
-          <i class="bi bi-search"></i>
-        </button>
-        <button class="btn btn-link d-none d-lg-block" type="button">
-          <i class="bi bi-search"></i>
-        </button>
-      </div>
+      <a class="navbar-brand fw-bold" href="#">NAVBAR</a>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main class="container-fluid flex-grow-1 py-4 main-content">
     <div class="container">
-      <div class="row g-4 content-row">
-        
-        <!-- Columna Izquierda: Imagen + Precio -->
-        <div class="col-12 col-lg-6 left-column">
-          <!-- Imagen + Info del Producto (70% altura) -->
-          <div class="product-main-section">
-            <div class="bg-light p-4 rounded h-100 d-flex flex-column">
-              <h1 class="mb-1"><strong>HTML+CSS</strong> 
-                <br>All Inclusive</h1>
-              <div class="text-muted small mb-2">By Julián Alvarez</div>
-              <span class="badge badge-custom mb-2">Más Pedido</span>
-              <div class="mb-3">
-                <span class="text-warning">
-                  &#9733;&#9733;&#9733;&#9733;&#9734;
-                </span>
-                <span class="ms-2 small text-muted">4/5</span>
+      
+      <!-- Card Principal Horizontal (70% altura del main) -->
+      <div class="product-card-horizontal mb-4">
+        <div class="row g-0 h-100">
+          
+          <!-- Columna Izquierda: Imagen + Título + Precio -->
+          <div class="col-12 col-lg-5 product-left-section">
+            <div class="product-left-content h-100 p-4">
+              
+              <!-- Título y Badge -->
+              <div class="product-header mb-3">
+                <h1 class="product-title mb-2">
+                  <strong>HTML+CSS</strong><br>All Inclusive
+                </h1>
+                <span class="badge badge-custom">Más Pedido</span>
               </div>
-              <div class="product-image flex-grow-1">
+              
+              <!-- Imagen del Producto -->
+              <div class="product-image-main mb-4">
                 <img src="/IMG/html+css.jpeg" alt="HTML+CSS ALL INCLUSIVE" class="img-fluid w-100 h-100">
               </div>
+              
+              <!-- Precio -->
+              <div class="product-price-section">
+                <div class="price-display mb-3">
+                  <span class="price-amount">$12.000 ARS</span>
+                </div>
+                <button class="btn btn-primary btn-buy-main">Comprar Ahora</button>
+              </div>
+              
             </div>
           </div>
           
-          <!-- Precio (30% altura) -->
-          <div class="price-main-section">
-            <div class="price-box h-100 d-flex flex-column justify-content-center">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="fs-3 text-danger fw-bold">$12.000 ARS</span>
-              </div>
-              <button class="btn btn-primary buy-btn">Comprar Ahora</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna Derecha: Descripción Completa + Comentarios -->
-        <div class="col-12 col-lg-6 right-column">
-          <!-- Descripción Completa con Specs y Badges (60% altura) -->
-          <div class="description-main-section">
-            <div class="description-complete-card h-100">
-              <h4><i class="bi bi-info-circle me-2"></i>Descripción del Curso</h4>
+          <!-- Columna Derecha: Descripción + Specs + Badges -->
+          <div class="col-12 col-lg-7 product-right-section">
+            <div class="product-right-content h-100">
               
               <!-- Descripción Principal -->
-              <p class="description-text">
-                Este curso te va a <span class="highlight">volar la peluca!</span> 
-                Aprenderás desde cero todo lo necesario para convertirte en un experto en HTML y CSS.
-              </p>
-              <p class="description-text">
-                <strong>Incluye:</strong> 50+ videos, ejercicios prácticos, proyectos reales y certificado de finalización.
-                <span class="highlight">¡Todo lo que necesitas para comenzar tu carrera web!</span>
-              </p>
+              <h4 class="description-title">
+                <i class="bi bi-info-circle me-2"></i>Descripción del Curso
+              </h4>
+              
+              <div class="description-content">
+                <p class="description-text">
+                  Este curso te va a <span class="highlight">volar la peluca!</span> 
+                  Aprenderás desde cero todo lo necesario para convertirte en un experto en HTML y CSS.
+                </p>
+                <p class="description-text">
+                  <strong>Incluye:</strong> 50+ videos, ejercicios prácticos, proyectos reales y certificado de finalización.
+                  <span class="highlight">¡Todo lo que necesitas para comenzar tu carrera web!</span>
+                </p>
+              </div>
               
               <!-- Separador -->
-              <hr class="my-3">
+              <hr class="section-divider">
               
-              <!-- Especificaciones Compactas -->
-              <div class="specs-compact mb-3">
-                <div class="specs-row">
-                  <span class="spec-item-compact">
-                    <i class="bi bi-clock text-primary me-1"></i><strong>8 horas</strong>
-                  </span>
-                  <span class="spec-item-compact">
-                    <i class="bi bi-book text-success me-1"></i><strong>50+ lecciones</strong>
-                  </span>
-                  <span class="spec-item-compact">
-                    <i class="bi bi-mortarboard text-info me-1"></i><strong>Principiante</strong>
-                  </span>
+              <!-- Especificaciones en Grid -->
+              <div class="specs-horizontal mb-4">
+                <h6 class="section-subtitle mb-3">Especificaciones</h6>
+                <div class="specs-grid-horizontal">
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-clock text-primary me-2"></i>
+                    <span><strong>8 horas</strong></span>
+                  </div>
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-book text-success me-2"></i>
+                    <span><strong>50+ lecciones</strong></span>
+                  </div>
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-mortarboard text-info me-2"></i>
+                    <span><strong>Principiante</strong></span>
+                  </div>
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-globe text-warning me-2"></i>
+                    <span><strong>Español</strong></span>
+                  </div>
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-phone text-purple me-2"></i>
+                    <span><strong>Mobile/Desktop</strong></span>
+                  </div>
+                  <div class="spec-item-horizontal">
+                    <i class="bi bi-download text-secondary me-2"></i>
+                    <span><strong>Material incluido</strong></span>
+                  </div>
                 </div>
-                <div class="specs-row">
-                  <span class="spec-item-compact">
-                    <i class="bi bi-globe text-warning me-1"></i><strong>Español</strong>
+              </div>
+              
+              <!-- Separador -->
+              <hr class="section-divider">
+              
+              <!-- Badges en Grid -->
+              <div class="badges-horizontal">
+                <h6 class="section-subtitle mb-3">Beneficios Incluidos</h6>
+                <div class="badges-grid-horizontal">
+                  <span class="badge-horizontal bg-success">
+                    <i class="bi bi-check-circle me-2"></i>Certificado oficial
                   </span>
-                  <span class="spec-item-compact">
-                    <i class="bi bi-phone text-purple me-1"></i><strong>Mobile/Desktop</strong>
+                  <span class="badge-horizontal bg-primary">
+                    <i class="bi bi-infinity me-2"></i>Acceso de por vida
                   </span>
-                  <span class="spec-item-compact">
-                    <i class="bi bi-download text-secondary me-1"></i><strong>Material incluido</strong>
+                  <span class="badge-horizontal bg-warning">
+                    <i class="bi bi-shield-check me-2"></i>Garantía 30 días
+                  </span>
+                  <span class="badge-horizontal bg-info">
+                    <i class="bi bi-people me-2"></i>Comunidad exclusiva
+                  </span>
+                  <span class="badge-horizontal bg-secondary">
+                    <i class="bi bi-headset me-2"></i>Soporte técnico
+                  </span>
+                  <span class="badge-horizontal bg-danger">
+                    <i class="bi bi-bullseye me-2"></i>Proyectos prácticos
                   </span>
                 </div>
               </div>
               
               <!-- Separador -->
-              <hr class="my-3">
+              <hr class="section-divider">
               
-              <!-- Badges Compactos -->
-              <div class="badges-compact">
-                <div class="badges-row">
-                  <span class="badge-compact bg-success">
-                    <i class="bi bi-check-circle me-1"></i>Certificado oficial
-                  </span>
-                  <span class="badge-compact bg-primary">
-                    <i class="bi bi-infinity me-1"></i>Acceso de por vida
-                  </span>
-                  <span class="badge-compact bg-warning">
-                    <i class="bi bi-shield-check me-1"></i>Garantía 30 días
-                  </span>
+              <!-- Contenido adicional para demostrar scroll -->
+              <div class="additional-content">
+                <h6 class="section-subtitle mb-3">¿Qué Aprenderás?</h6>
+                <ul class="learning-objectives">
+                  <li>🏗️ Estructura HTML semántica y accesible</li>
+                  <li>🎨 CSS moderno: Flexbox, Grid y Responsive Design</li>
+                  <li>📱 Desarrollo Mobile-First y Progressive Enhancement</li>
+                  <li>🔧 Herramientas de desarrollo y debugging</li>
+                  <li>🚀 Optimización y mejores prácticas</li>
+                  <li>💼 Proyectos del mundo real para tu portfolio</li>
+                  <li>🎯 SEO básico y performance web</li>
+                  <li>🔍 Metodologías CSS: BEM, SCSS y CSS Variables</li>
+                </ul>
+                
+                <h6 class="section-subtitle mb-3 mt-4">Requisitos</h6>
+                <ul class="requirements-list">
+                  <li>💻 Computadora con acceso a internet</li>
+                  <li>🔥 Ganas de aprender y practicar</li>
+                  <li>⏰ Dedicar 2-3 horas por semana</li>
+                  <li>📝 Editor de código (recomendamos VS Code)</li>
+                </ul>
+                
+                <h6 class="section-subtitle mb-3 mt-4">Temario Detallado</h6>
+                <div class="course-syllabus">
+                  <h6>Módulo 1: Fundamentos de HTML</h6>
+                  <ul>
+                    <li>🏷️ Estructura básica de un documento HTML</li>
+                    <li>📋 Elementos semánticos: header, nav, main, section, article</li>
+                    <li>🔗 Enlaces y navegación</li>
+                    <li>🖼️ Imágenes y multimedia</li>
+                    <li>📝 Formularios y validación</li>
+                  </ul>
+                  
+                  <h6>Módulo 2: CSS Básico</h6>
+                  <ul>
+                    <li>🎨 Selectores y especificidad</li>
+                    <li>📏 Box Model y posicionamiento</li>
+                    <li>🌈 Colores y tipografías</li>
+                    <li>🎯 Pseudo-clases y pseudo-elementos</li>
+                  </ul>
+                  
+                  <h6>Módulo 3: Layouts Modernos</h6>
+                  <ul>
+                    <li>📐 Flexbox en profundidad</li>
+                    <li>🔲 CSS Grid Layout</li>
+                    <li>📱 Responsive Design y Media Queries</li>
+                    <li>🎪 Animaciones y transiciones</li>
+                  </ul>
                 </div>
-                <div class="badges-row">
-                  <span class="badge-compact bg-info">
-                    <i class="bi bi-people me-1"></i>Comunidad exclusiva
-                  </span>
-                  <span class="badge-compact bg-secondary">
-                    <i class="bi bi-headset me-1"></i>Soporte técnico
-                  </span>
-                  <span class="badge-compact bg-danger">
-                    <i class="bi bi-bullseye me-1"></i>Proyectos prácticos
-                  </span>
+
+                <h6 class="section-subtitle mb-3 mt-4">Proyectos Incluidos</h6>
+                <div class="projects-list">
+                  <div class="project-item">
+                    <h6>🌐 Proyecto 1: Landing Page Personal</h6>
+                    <p>Crea tu primera página web personal con HTML semántico y CSS moderno</p>
+                  </div>
+                  
+                  <div class="project-item">
+                    <h6>🛍️ Proyecto 2: Tienda Online</h6>
+                    <p>Desarrolla una tienda virtual responsiva usando Flexbox y Grid</p>
+                  </div>
+                  
+                  <div class="project-item">
+                    <h6>📰 Proyecto 3: Blog Responsivo</h6>
+                    <p>Construye un blog completamente responsivo con navegación avanzada</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Comentarios Compactos (40% altura) -->
-          <div class="comments-main-section">
-            <div class="comments-compact-section h-100">
-              <h6 class="comments-title"><i class="bi bi-chat-heart me-2"></i>¡Resultados Reales!</h6>
-              <div id="comentariosCarousel" class="carousel slide h-100" data-bs-ride="carousel">
-                <div class="carousel-inner h-100">
-                  <!-- Comentario 1 -->
-                  <div class="carousel-item active h-100">
-                    <div class="d-flex flex-column justify-content-center h-100 text-center">
-                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
-                        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana" class="w-100 h-100 rounded-circle">
-                      </div>
-                      <div>
-                        <p class="mb-3 fst-italic">"Excelente curso, muy recomendado para principiantes. Me ayudó muchísimo a entender los conceptos básicos."</p>
-                        <h6 class="text-muted mb-2">— Ana García</h6>
-                        <div class="text-warning">
-                          &#9733;&#9733;&#9733;&#9733;&#9733;
-                        </div>
-                      </div>
-                    </div>
+        </div>
+      </div>
+      
+      <!-- Sección de Comentarios (30% altura del main) -->
+      <div class="comments-horizontal-section">
+        <div class="comments-container">          
+          <div id="comentariosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              
+              <!-- Comentario 1 -->
+              <div class="carousel-item active">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana García" class="rounded-circle">
                   </div>
-                  
-                  <!-- Comentario 2 -->
-                  <div class="carousel-item h-100">
-                    <div class="d-flex flex-column justify-content-center h-100 text-center">
-                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
-                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis" class="w-100 h-100 rounded-circle">
-                      </div>
-                      <div>
-                        <p class="mb-3 fst-italic">"Me ayudó a entender HTML de forma sencilla. Muy bien explicado y con buenos ejemplos prácticos."</p>
-                        <h6 class="text-muted mb-2">— Luis Rodríguez</h6>
-                        <div class="text-warning">
-                          &#9733;&#9733;&#9733;&#9733;&#9734;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Comentario 3 -->
-                  <div class="carousel-item h-100">
-                    <div class="d-flex flex-column justify-content-center h-100 text-center">
-                      <div class="comentario-avatar-large mx-auto mb-3" style="width: 60px; height: 60px;">
-                        <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta" class="w-100 h-100 rounded-circle">
-                      </div>
-                      <div>
-                        <p class="mb-3 fst-italic">"Contenido claro y bien explicado. Perfecto para comenzar en el mundo del desarrollo web."</p>
-                        <h6 class="text-muted mb-2">— Marta Silva</h6>
-                        <div class="text-warning">
-                          &#9733;&#9733;&#9733;&#9733;&#9733;
-                        </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"Excelente curso, muy recomendado para principiantes. Me ayudó muchísimo a entender los conceptos básicos de HTML y CSS de manera muy clara y práctica."</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Ana García</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
-                  <i class="bi bi-chevron-left text-dark fs-4"></i>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
-                  <i class="bi bi-chevron-right text-dark fs-4"></i>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
               </div>
+              
+              <!-- Comentario 2 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis Rodríguez" class="rounded-circle">
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"Me ayudó a entender HTML de forma sencilla. Muy bien explicado y con buenos ejemplos prácticos que se pueden aplicar inmediatamente."</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Luis Rodríguez</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                        <span class="rating-text">4/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comentario 3 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta Silva" class="rounded-circle">
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"Contenido claro y bien explicado. Perfecto para comenzar en el mundo del desarrollo web. Los proyectos incluidos son muy útiles."</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Marta Silva</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
+              <i class="bi bi-chevron-left text-dark"></i>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
+              <i class="bi bi-chevron-right text-dark"></i>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            
           </div>
         </div>
-        
       </div>
+      
     </div>
   </main>
 

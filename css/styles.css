@@ -1,3 +1,4 @@
+/*  Selectores Generales */
 .lettercolor {
     color: rgba(0, 136, 255, 0.677);
     font-weight: bold;
@@ -5,21 +6,14 @@
     font-size: 6rem;
 }
 
-
-/* NAVBAR */    
-
-.susbrayado {
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 3px;
-    text-decoration-color: rgba(0, 136, 255, 0.677);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.susbrayado:hover {
-    color: rgba(0, 136, 255, 0.677);
-    text-decoration: underline;
-    padding-left: 10px;
-}
 h1,
 h2,
 h3 {
@@ -34,6 +28,117 @@ hr {
     border: 2px solid rgba(0, 136, 255, 0.677);
 }
 
+/* NAVBAR */
+
+.susbrayado {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(0, 136, 255, 0.677);
+}
+
+.susbrayado:hover {
+    color: rgba(0, 136, 255, 0.677);
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+
+/* Carrousel Slider */
+
+.slider {
+    width: 30rem;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    box-shadow: #333 0px 4px 8px;
+
+}
+
+.slider:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        width: 20rem;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+}
+
+
+
+#carouselExampleAutoplaying .carousel-inner,
+#carouselExampleAutoplaying .carousel-item {
+    height: 500px;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* BANNER PROMOCIONAL */
+.banner-promocional {
+    background-color: #8B5CF6;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-promocional::before {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+
+}
+
+/* Categorias */
+#categorias {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.promotion-circle {
+    position: relative;
+}
+
+.discount-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    margin: 0 auto;
+    transform: rotate(-15deg);
+}
+
+.discount-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.discount-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+
+
+
+
 .col-2 {
 
     padding: 10px;
@@ -46,17 +151,9 @@ hr {
     cursor: pointer;
 }
 
-/* CARD INICIO */
-/* .card{display: flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    .cardbutton{
-        background-color: rgba(0, 136, 255, 0.677);
-        border-color: rgba(0, 136, 255, 0.677);
-    }
-} */
+
+
+
 
 /* FOOTER */
 footer {

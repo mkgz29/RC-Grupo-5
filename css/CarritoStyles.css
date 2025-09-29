@@ -1,92 +1,63 @@
- /* Custom CSS for specific design elements */
- :root {
-   --header-bg: #6c7b8a;
-   --page-title-bg: #9ca3af;
-   --primary-blue: #6366f1;
- }
-
- .header-custom {
-   background-color: var(--header-bg) !important;
- }
-
- .page-title-custom {
-   background-color: var(--page-title-bg) !important;
- }
-
- .btn-primary-custom {
-   background-color: var(--primary-blue);
-   border-color: var(--primary-blue);
- }
-
- .btn-primary-custom:hover {
-   background-color: #5338f5;
-   border-color: #5338f5;
- }
-
- .product-image-placeholder {
-   background-color: #e5e7eb;
-   color: #9ca3af;
-   font-size: 1.5rem;
- }
-
- .cart-badge-custom {
-   top: -8px;
-   right: -8px;
-   background-color: var(--primary-blue);
- }
-
- .container-main {
-   max-width: 400px;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
- }
-
- @media (min-width: 768px) {
-   .container-main {
-     max-width: 100%;
-     box-shadow: none;
-   }
- }
-
 /* ========================================= */
-/* AJUSTES DE MEJORA UX Y RESPONSIVE        */
+/* CARRITO STYLES - DEVHUB              */
 /* ========================================= */
 
-/* Tipografía y respiración visual */
-body { 
-  scroll-behavior: smooth; 
+/* Importar fuente personalizada */
+@import url("https://db.onlinewebfonts.com/c/cdf9e1a785f6767291f7e12174be6174?family=Open+Sauce+One+Regular");
+
+/* ========================================= */
+/* VARIABLES CSS                             */
+/* ========================================= */
+:root {
+  --header-bg: #6c7b8a;
+  --page-title-bg: #9ca3af;
+  --primary-blue: #6366f1;
+  --font-family: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
 }
 
-.card { 
-  border-radius: 12px; 
+/* ========================================= */
+/* CONFIGURACIÓN GLOBAL                      */
+/* ========================================= */
+body {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
-img.rounded { 
-  border-radius: 8px; 
+* {
+  font-family: var(--font-family) !important;
 }
 
-/* Botones más cómodos en mobile */
-@media (max-width: 575.98px) {
-  .btn { 
-    padding: .6rem .9rem; 
-  }
+/* ========================================= */
+/* COMPONENTES PERSONALIZADOS               */
+/* ========================================= */
+
+/* Header personalizado */
+.header-custom {
+  background-color: var(--header-bg) !important;
 }
 
-/* Hover en filas (solo escritorio) */
-@media (min-width: 768px) {
-  table tbody tr:hover {
-    background: #f8f9fa;
-    transition: background-color 0.15s ease-in-out;
-  }
+.page-title-custom {
+  background-color: var(--page-title-bg) !important;
 }
 
-/* Fix para el aside pegado sin invadir el header */
-@media (min-width: 992px) {
-  .position-sticky {
-    top: 6rem !important; /* debajo del navbar sticky */
-  }
+/* Botones personalizados */
+.btn-primary-custom {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
 }
 
-/* Mejoras adicionales para UX */
+.btn-primary-custom:hover {
+  background-color: #5338f5;
+  border-color: #5338f5;
+}
+
+/* Placeholders de productos */
+.product-image-placeholder {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  font-size: 1.5rem;
+}
+
 .course-image-placeholder {
   transition: transform 0.2s ease-in-out;
 }
@@ -95,20 +66,138 @@ img.rounded {
   transform: scale(1.05);
 }
 
+/* Badge del carrito */
+.cart-badge-custom {
+  top: -8px;
+  right: -8px;
+  background-color: var(--primary-blue);
+}
+
+/* Container principal */
+.container-main {
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+/* ========================================= */
+/* NAVBAR PERSONALIZADO                      */
+/* ========================================= */
+
+/* Navbar con color primary blue */
+.navbar {
+  background-color: var(--primary-blue) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: white !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar .btn-primary {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.navbar .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar .form-control {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar .form-control:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================================= */
+/* MEJORAS UX Y ELEMENTOS INTERACTIVOS      */
+/* ========================================= */
+
+/* Tipografía y elementos visuales */
+.card {
+  border-radius: 12px;
+}
+
+img.rounded {
+  border-radius: 8px;
+}
+
 /* Animación suave para botones de eliminar */
 .btn-outline-danger:hover {
   transform: translateY(-1px);
   transition: all 0.2s ease-in-out;
 }
 
-/* Mejorar el espaciado en mobile */
+/* ========================================= */
+/* MEDIA QUERIES - RESPONSIVE               */
+/* ========================================= */
+
+/* Botones más cómodos en mobile */
+@media (max-width: 575.98px) {
+  .btn {
+    padding: .6rem .9rem;
+  }
+}
+
+/* Mejoras para tablet y desktop */
+@media (min-width: 768px) {
+  .container-main {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  /* Hover en filas de tabla */
+  table tbody tr:hover {
+    background: #f8f9fa;
+    transition: background-color 0.15s ease-in-out;
+  }
+}
+
+/* Mejoras específicas mobile */
 @media (max-width: 767.98px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .card-body {
     padding: 1.25rem;
+  }
+}
+
+/* Fix para desktop - aside sticky */
+@media (min-width: 992px) {
+  .position-sticky {
+    top: 6rem !important;
   }
 }

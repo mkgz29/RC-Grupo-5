@@ -80,11 +80,12 @@ hr {
     height: 500px;
     object-fit: cover;
     object-position: center;
+    ;
 }
 
 /* BANNER PROMOCIONAL */
 .banner-promocional {
-    background-color: #8B5CF6;
+    background-image: url(../assets/img/Slider1.jpg)!important;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 

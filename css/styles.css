@@ -1,9 +1,13 @@
 /*  Selectores Generales */
 .lettercolor {
-    color: rgba(0, 136, 255, 0.677);
-    font-weight: bold;
-    font-style: italic;
+    background: linear-gradient(180deg, #6a2dfa 5%, #3B82F6 50%, #045f8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+ /*    font-weight: bold;
+    font-style: italic; */
     font-size: 6rem;
+    display: inline-block;
 }
 
 body {
@@ -19,8 +23,6 @@ h2,
 h3 {
     text-align: center;
     font-size: 4rem;
-    font-weight: bold;
-    font-style: italic;
 }
 
 hr {
@@ -28,7 +30,37 @@ hr {
     border: 2px solid rgba(0, 136, 255, 0.677);
 }
 
-/* NAVBAR */
+/* Navbar */
+.navbar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+
+.letter:hover{
+    color: rgba(0, 136, 255, 0.677);
+    text-shadow: #0EA5E9 2px 2px 25px;
+}
+
+.navbar-brand.p {
+    margin: auto;
+    background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: static;
+        padding: 10px;
+    }
+}
 
 .susbrayado {
     text-decoration: underline;
@@ -70,10 +102,19 @@ hr {
 }
 
 
-
 #carouselExampleAutoplaying .carousel-inner,
 #carouselExampleAutoplaying .carousel-item {
+    margin-top: 20px;
     height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #carouselExampleAutoplaying .carousel-inner,
+    #carouselExampleAutoplaying .carousel-item {
+        margin: auto;
+    }
+
 }
 
 #carouselExampleAutoplaying .carousel-item img {
@@ -83,9 +124,10 @@ hr {
     ;
 }
 
+
 /* BANNER PROMOCIONAL */
 .banner-promocional {
-    background-image: url(../assets/img/banneroffert.jpg)!important;
+    background-image: url(../assets/img/banneroffert.jpg) !important;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 

@@ -14,87 +14,289 @@
 <body>
     <main>
         <div class="container-fluid p-0">
-            <div class="row g-0 min-vh-100 align-items-stretch">
-                <div class="col-12 col-md-6 img-col d-none d-md-block p-0">
-                    <img src="assets/img/foto2.jpg" alt="Persona estudiando cursos"
-                        class="img-fluid h-100 w-100 object-fit-cover" />
+            <div class="row g-0 align-items-stretch">
+                <div class="col-md-6 vh-100 d-none d-md-block d-none d-md-block p-0">
+                    <img src="assets/img/devhubregistro.webp" alt="Imagen con logo DevHub"
+                        class="w-100 h-100 object-fit-cover d-block" />
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center bg-dark text-light p-4">
-                    <div class="w-100 text-center">
-                        <p class="mb-1 text-center text-white fs-3">
-                            Aprenda nuevas habilidades con nuestros cursos
+                <div class="col-12 col-md-6 d-flex align-items-start justify-content-center bg-dark text-light p-4 overflow-auto"
+                    style="max-height: 100vh;">
+                    <div class="w-100" style="max-width: 600px;">
+                        <p class=" mb-0 text-center text-primary fs-3 fw-bold">
+                            Crea tu cuenta en DevHub
                         </p>
                         <form action="procesar_contacto.php" method="POST" autocomplete="on" class="p-1">
                             <fieldset>
-                                <legend class="col-form-label mb-2 text-center text-white fst-italic">
-                                    Registrese llenando el siguiente formulario
+                                <legend class="col-form-label mb-2 text-center text-white">
+                                    Completa tu registro para comenzar a aprender
                                 </legend>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" id="floatingInput1"
-                                        name="Nombre_y_Apellido" placeholder="Ingresa tu nombre completo"
-                                        autocomplete="name" autofocus
-                                        pattern="^(?=.{2,100}$)[A-Za-zÀ-ÖØ-öø-ÿÑñÇç'’`´]+(?:[ \-'][A-Za-zÀ-ÖØ-öø-ÿÑñÇç'’`´]+)+$"
-                                        title="Al menos 2 palabras las cuales deben ser tu nombre y apellido. Solo letras, espacios, guiones y apóstrofes."
-                                        required />
-                                    <label for="floatingInput1">Nombre y Apellido</label>
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-person-circle me-2"></i>
+                                            Información Personal
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="nombre"
+                                                        placeholder="Tu nombre" required autofocus
+                                                        pattern="^[A-Za-zÀ-ÖØ-öø-ÿÑñÇç'\s]{2,30}$"
+                                                        title="Ingrese su nombre de pila. Puede incluir segundo nombre si corresponde (Ej: Juan Carlos).">
+                                                    <label for="nombre">
+                                                        <i class="bi bi-person me-1"></i>Nombre
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Ingresa un nombre válido (solo letras, 2-30 caracteres)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="apellido"
+                                                        placeholder="Tu apellido" required
+                                                        pattern="^[A-Za-zÀ-ÖØ-öø-ÿÑñÇç'\s]{2,30}$"
+                                                        title="Ingrese su/s apellidos. Si tiene más de un apellido, sepárelos con un espacio (Ej: Pérez Gómez). No incluya prefijos ni símbolos.">
+                                                    <label for="apellido">
+                                                        <i class="bi bi-person me-1"></i>Apellido
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Ingresa un apellido válido (solo letras, 2-30 caracteres)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="date" class="form-control" id="fechaNacimiento"
+                                                    name="fechaNacimiento" min="1925-01-01" max="2012-09-30" required>
+                                                <label for="fechaNacimiento">
+                                                    <i class="bi bi-calendar-date me-1"></i>Fecha de Nacimiento
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Selecciona tu fecha de nacimiento
+                                                </div>
+                                            </div>
+                                            <div class="form-text">
+                                                <i class="bi bi-info-circle me-1"></i>
+                                                Debes ser mayor de 13 años para registrarte
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <select class="form-select" id="genero">
+                                                    <option value="">Seleccionar...</option>
+                                                    <option value="masculino">Masculino</option>
+                                                    <option value="femenino">Femenino</option>
+                                                    <option value="otro">Otro</option>
+                                                    <option value="prefiero_no_decir">Prefiero no decir</option>
+                                                </select>
+                                                <label for="genero">
+                                                    <i class="bi bi-gender-ambiguous me-1"></i>Género (Opcional)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" id="floatingInput2"
-                                        name="Nombre_de_Usuario" minlength="3" maxlength="20" pattern="^[A-Za-z0-9_]+$"
-                                        title="Solo letras, números y guion bajo."
-                                        placeholder="Ingresa tu Nombre de Usuario" required />
-                                    <label for="floatingInput2">Nombre de Usuario</label>
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-envelope-at me-2"></i>
+                                            Información de Contacto
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="email" name="email"
+                                                    placeholder="tu@email.com" required autocomplete="email"
+                                                    title="Introduce un correo válido. Ej: usuario@ejemplo.com">
+                                                <label for="email">
+                                                    <i class="bi bi-envelope me-1"></i>Email
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Ingresa un email válido
+                                                </div>
+                                            </div>
+                                            <div class="form-text">
+                                                <i class="bi bi-shield-check me-1"></i>
+                                                Usaremos tu email para confirmación y comunicaciones importantes
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="codigoPais" required="">
+                                                        <option value="">País</option>
+                                                        <option value="+54">🇦🇷 Argentina (+54)</option>
+                                                        <option value="+56">🇨🇱 Chile (+56)</option>
+                                                        <option value="+598">🇺🇾 Uruguay (+598)</option>
+                                                        <option value="+595">🇵🇾 Paraguay (+595)</option>
+                                                        <option value="+55">🇧🇷 Brasil (+55)</option>
+                                                        <option value="+57">🇨🇴 Colombia (+57)</option>
+                                                        <option value="+51">🇵🇪 Perú (+51)</option>
+                                                        <option value="+52">🇲🇽 México (+52)</option>
+                                                        <option value="+34">🇪🇸 España (+34)</option>
+                                                        <option value="+1">🇺🇸 Estados Unidos (+1)</option>
+                                                    </select>
+                                                    <label for="codigoPais">Código</label>
+                                                    <div class="invalid-feedback">Selecciona tu país</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="tel" class="form-control" id="telefono" name="telefono"
+                                                        placeholder="11 1234 5678" required pattern="^[0-9\s\-]{8,15}$"
+                                                        inputmode="tel"
+                                                        title="Introduce tu número telefónico sin el código de país. Se permiten dígitos, espacios, guiones, paréntesis y puntos. Debe contener al menos 6 dígitos (ej: 15 1234-5678 o 341-1234567).">
+                                                    <label for="telefono">
+                                                        <i class="bi bi-phone me-1"></i>Teléfono
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Formato: 11 1234 5678 (8-15 dígitos)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="provincia" name="provincia"
+                                                    placeholder="Tu provincia" required
+                                                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿÑñÇç'\s\-]{2,50}$"
+                                                    title="Ingresa tu provincia (solo letras, 2-50 caracteres)">
+                                                <label for="provincia">
+                                                    <i class="bi bi-geo-alt me-1"></i>Provincia
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Ingresa tu provincia (solo letras, 2-50 caracteres)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="codigopostal"
+                                                    name="codigopostal" placeholder="Tu codigo postal de area" required
+                                                    minlength="3" maxlength="10" pattern="^[A-Za-z0-9\s\-]{3,10}$"
+                                                    title="Código postal: 3–10 caracteres. Se permiten letras, números, espacios y guiones (ej: 94103, SW1A 1AA).">
+                                                <label for="codigo postal">
+                                                    <i class="bi bi-envelope"></i> Codigo Postal
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Código postal: 3–10 caracteres. Se permiten letras, números, espacios y guiones (ej: 94103, SW1A 1AA).
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control rounded-3" id="floatingInput3" name="Email"
-                                        placeholder="Ejemplo@mail.com" required />
-                                    <label for="floatingInput3">Email</label>
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-key me-2"></i>
+                                            Credenciales de Acceso
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="usuario"
+                                                    placeholder="nombre_usuario" required minlength="3"
+                                                    maxlength="20" pattern="^[a-zA-Z0-9_]+$" autocomplete="username"
+                                                    title="3-20 caracteres: solo letras, números y guión bajo">
+                                                <label for="usuario">
+                                                    <i class="bi bi-at me-1"></i>Nombre de Usuario
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    3-20 caracteres: solo letras, números y guión bajo
+                                                </div>
+                                            </div>
+                                            <div class="form-text">
+                                                <i class="bi bi-lightbulb me-1"></i>
+                                                Este será tu identificador único en la plataforma
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="password" name="password"
+                                                    placeholder="Contraseña" required minlength="8" maxlength="64"
+                                                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                                                    title="La contraseña debe tener al menos 8 caracteres e incluir al menos una letra y un número."
+                                                    autocomplete="new-password">
+                                                <label for="password">
+                                                    <i class="bi bi-lock me-1"></i>Contraseña
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    La contraseña debe tener al menos 8 caracteres e incluir al menos una letra y un número.
+                                                </div>
+                                            </div>
+                                            <div class="form-text">
+                                                <i class="bi bi-shield-lock me-1"></i>
+                                                Usa una combinación de letras, números y símbolos
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                                    placeholder="Confirmar contraseña" required title="Las contraseñas deben coincidir"
+                                                    autocomplete="new-password">
+                                                <label for="confirmPassword">
+                                                    <i class="bi bi-lock-fill me-1"></i>Confirmar Contraseña
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Las contraseñas deben coincidir
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="tel" class="form-control rounded-3" id="floatingInput4"
-                                        name="Número_de_Telefono" placeholder="Número de Teléfono" inputmode="tel"
-                                        pattern="^\+?[0-9\s\-]{7,20}$"
-                                        title="Ej: +54 9 11 1234 5678 (números, espacios o -)." required />
-                                    <label for="floatingInput4">Número de Teléfono (Ej. +54 9 11 1234 5678)</label>
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-body">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                <i class="bi bi-envelope-heart me-1"></i>
+                                                Quiero recibir novedades, ofertas especiales y tips de aprendizaje por
+                                                email
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="terminos" required="">
+                                            <label class="form-check-label" for="terminos">
+                                                <i class="bi bi-file-text me-1"></i>
+                                                Acepto los <a href="#" class="text-decoration-none fw-semibold">Términos
+                                                    de Servicio</a> <!--404 Aqui-->
+                                                y la <a href="#" class="text-decoration-none fw-semibold">Política de
+                                                    Privacidad</a> <!--404 Aqui-->
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                Debes aceptar los términos para continuar
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                                            <i class="bi bi-info-circle-fill me-2"></i>
+                                            <div>
+                                                <small>
+                                                    Al registrarte, confirmas que tienes al menos 13 años y aceptas
+                                                    recibir
+                                                    comunicaciones relacionadas con tu cuenta y cursos.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" id="floatingInput5"
-                                        name="Calle_y_número_de_domicilio" placeholder=""
-                                        pattern="^\s*[A-Za-zÑñÁáÉéÍíÓóÚú0-9\.\- ]{2,100}\s+[0-9]{1,5}(?:[\/\-][0-9]{1,4})?(?:,\s*(?:Piso\.?\s*\d{1,3}|Depto(?:\.|amento)?\s*[A-Za-z0-9\-]+|Dpto\.?\s*[A-Za-z0-9\-]+|Pta\.?\s*[A-Za-z0-9\-]+|Torre\.?\s*[A-Za-z0-9\-]+|Unidad\.?\s*[A-Za-z0-9\-]+))?\s*$"
-                                        title="Ej: Av. Siempre Viva 742, Piso 3 o Calle Falsa 123/4. Requiere calle y número; admite piso/depto/torre después de coma"
-                                        required />
-                                    <label for="floatingInput5">Domicilio (calle, número y departamento si
-                                        corresponde)</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput6" name="Código_Postal"
-                                        placeholder="Código Postal" inputmode="numeric" pattern="^[0-9]{4,8}$"
-                                        title="Solo números, 4 a 8 dígitos." required />
-                                    <label for="floatingInput6">Código Postal</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="floatingInput7" name="Contraseña"
-                                        minlength="8" maxlength="25" placeholder="Contraseña"
-                                        pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
-                                        title="Mínimo 8 caracteres, incluir letras y números." required />
-                                    <label for="floatingInput7">Contraseña (Min. 8 Caracteres)</label>
-                                </div>
-                                <div class="mb-3">
-                                    <button class="btn btn-lg w-100 btn-success" type="submit">
-                                        Enviar
+                                <div class="d-grid gap-2 mb-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-person-plus-fill me-2"></i>
+                                        Crear Mi Cuenta <!--404 Aqui-->
                                     </button>
                                 </div>
                             </fieldset>
-                            <p class="mb-2">
-                                ¿Ya tienes una cuenta?<a class="p-2" href="#">Inicia sesión</a><br />
+                            <p class="mb-2 text-center">
+                                ¿Ya tienes una cuenta?<a class="p-2" href="#">Inicia sesión</a><br /> <!--404 Aqui-->
                             </p>
-                            <p class="mb-2">
-                                <a href="#">Olvidé mi contraseña</a>
-                            </p>
-                            <p class="mt-3 small fs-5 fst-italic">
-                                Al hacer clic en «Enviar», aceptas nuestros
-                                <a href="#">Términos de servicio</a> y nuestra
-                                <a href="#">Política de privacidad</a>.
+                            <p class="mb-2 text-center">
+                                <a href="#">Olvidé mi contraseña</a> <!--404 Aqui-->
                             </p>
                         </form>
                     </div>

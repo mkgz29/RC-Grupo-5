@@ -1,3 +1,6 @@
+/* Importar fuente personalizada */
+@import url("https://db.onlinewebfonts.com/c/cdf9e1a785f6767291f7e12174be6174?family=Open+Sauce+One+Regular");
+
 :root {
   --bs-body-font-family: 'Poppins', sans-serif;
   --bs-heading-font-family: 'Orbitron', sans-serif;
@@ -11,8 +14,66 @@
   --primary-violet: #712cf9;
   --primary-black: #2b2929;
   --warm-white: #faf9f6;
+  
+  /* Sistema de fuentes dual */
+  --font-opensauce: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
+  --font-segoe: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* ========================================= */
+/* SISTEMA DE FUENTES DUAL                  */
+/* ========================================= */
+
+/* Configuración base con Segoe UI */
+body {
+  font-family: var(--font-segoe);
+}
+
+/* Open Sauce para navegación */
+.navbar,
+.navbar-brand,
+.nav-link,
+.dropdown-item,
+.navbar-text {
+  font-family: var(--font-opensauce);
+}
+
+/* Open Sauce para footer completo */
+footer,
+footer h5,
+footer h6,
+footer p,
+footer a,
+footer li {
+  font-family: var(--font-opensauce);
+}
+
+/* Open Sauce para títulos y destacados */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.fw-bold,
+.fw-semibold,
+.badge,
+.card-title {
+  font-family: var(--font-opensauce);
+}
+
+/* Reforzar Segoe UI para contenido */
+.card-text,
+.small,
+.text-muted,
+.form-control,
+.btn,
+p:not(.navbar-brand),
+.accordion-body,
+.price-box,
+.product-description {
+  font-family: var(--font-segoe);
+}
+
+/* Clases auxiliares */
+.font-opensauce { font-family: var(--font-opensauce); }
+.font-segoe { font-family: var(--font-segoe); }
 
 .navbar-brand {
   color: var(--primary-blue) !important;
@@ -26,12 +87,13 @@ h1 strong {
 }
 .product-image {
   width: 100%;
-  height: 180px;
-  background: #e9ecef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: .5rem;
+  max-width: 350px; /* Imagen más grande */
+  height: 280px; /* Altura fija más grande */
+  object-fit: cover; /* Mantener proporciones */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
 }
 
 .product-image img {
@@ -76,34 +138,94 @@ h1 strong {
   width: 100%;
 }
 
-/* Navbar personalizado */
-.navbar-custom {
-  padding: 0.5rem 0; /* Menos altura */
-  min-height: 50px; /* Altura fija más baja */
+/* ========================================= */
+/* NAVBAR PERSONALIZADO                     */
+/* ========================================= */
+
+/* Navbar con color oscuro (consistente con carrito) */
+.navbar {
+  background-color: #212529 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar-brand {
-  color: var(--primary-blue) !important;
-  font-family: var(--bs-heading-font-family);
-  font-size: 1.5rem;
+.navbar-custom {
+  padding: 0.5rem 0;
+  min-height: 50px;
+}
+
+
+.navbar-brand.p {
+  margin: auto;
+  background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-right: 10px;
   font-weight: 700;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--strong-blue) !important; /* Hover en azul fuerte */
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: white !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: white !important;
+  font-weight: 500;
 }
 
 .navbar-search-btn {
-  color: var(--primary-black) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   padding: 0.5rem;
   border: none;
   background: transparent;
 }
 
 .navbar-search-btn:hover {
-  color: var(--primary-violet) !important;
-  background-color: rgba(113, 44, 249, 0.1);
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.25rem;
 }
 
 .navbar-search-btn i {
   font-size: 1.2rem;
+}
+
+/* Botones en navbar */
+.navbar .btn-primary {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.navbar .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Formularios en navbar */
+.navbar .form-control {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar .form-control:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 footer {
@@ -143,20 +265,33 @@ footer {
                    }
                  }
 
-/* Card Horizontal Principal - Estructura Principal */
+/* Card Horizontal del Producto */
 .product-card-horizontal {
-  background: var(--warm-white);
-  border: 1px solid #dee2e6;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 62vh; /* Ajustado para dar más espacio a comentarios */
+  background: var(--warm-white);  
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: none;
+  height: auto;
   overflow: hidden;
+}
+
+/* Forzar que las columnas NO igualen alturas */
+.product-card-horizontal .row {
+  align-items: flex-start !important;
+}
+
+.product-card-horizontal .col-lg-5,
+.product-card-horizontal .col-lg-7 {
+  height: auto !important;
+  align-self: flex-start !important;
 }
 
 /* Secciones de la Card Horizontal */
 .product-left-section {
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
   border-right: 1px solid #dee2e6;
+  max-height: 600px; /* Igualar altura con columna derecha */
+  overflow: hidden;
 }
 
 .product-right-section {
@@ -167,15 +302,18 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 600px;
+  padding: 1.5rem;
 }
 
-/* Scroll para la parte derecha en desktop */
+/* Scroll para la parte derecha con altura controlada */
 .product-right-content {
-  display: block; /* Cambiar de flex a block */
+  display: block;
   overflow-y: auto; /* Scroll vertical */
   overflow-x: hidden; /* Sin scroll horizontal */
-  height: 100%; /* Altura completa del contenedor padre */
-  padding: 1.5rem; /* Padding interno para el contenido */
+  max-height: 600px; /* Altura máxima fija - CLAVE para eliminar espacio */
+  height: auto;
+  padding: 1.5rem;
 }
 
 /* Personalizar scrollbar */
@@ -222,6 +360,7 @@ footer {
   border-radius: 0.5rem;
   overflow: hidden;
   min-height: 200px;
+  max-height: 400px; /* Limitar altura máxima para evitar espacio excesivo */
 }
 
 .product-image-main img,
@@ -238,18 +377,19 @@ footer {
 
 .product-price-section {
   text-align: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 0.5rem;
-  margin-top: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  margin-top: auto; /* Empujar hacia abajo automáticamente */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .price-display {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .price-amount {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--strong-blue);
 }
@@ -257,10 +397,14 @@ footer {
 .btn-buy-main {
   background-color: var(--primary-violet);
   border-color: var(--primary-violet);
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.8rem 1.8rem; /* Botón más pequeño */
+  font-size: 1rem; /* Texto más pequeño */
   font-weight: 600;
   width: 100%;
+  max-width: 200px; /* Limitar ancho máximo */
+  margin: 0 auto; /* Centrar botón */
+  border-radius: 0.5rem;
+  display: block; /* Asegurar centrado */
 }
 
 .btn-buy-main:hover {
@@ -656,24 +800,27 @@ footer {
   .product-left-section {
     border-right: none;
     border-bottom: 1px solid #dee2e6;
+    max-height: none; /* Quitar altura fija en mobile */
+    overflow: visible;
   }
   
   .product-left-content {
     justify-content: flex-start;
     gap: 2rem;
+    height: auto; /* Altura automática en mobile */
+    padding: 1.5rem;
   }
   
-  /* Quitar scroll en mobile y volver a flex */
+  /* Contenido derecho responsive con scroll controlado */
   .product-right-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    overflow-y: visible;
+    overflow-y: auto;
     overflow-x: hidden;
+    max-height: 500px; /* Altura menor en mobile */
     height: auto;
     padding: 1.5rem;
-    max-height: none;
-    min-height: auto;
   }
   
   .product-title {
@@ -681,7 +828,7 @@ footer {
   }
   
   .price-amount {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .specs-grid-horizontal,
@@ -737,5 +884,156 @@ footer {
   
   .comment-author {
     font-size: 0.9rem;
+  }
+}
+
+/* ========================================= */
+/* NUEVAS SECCIONES INFORMATIVAS           */
+/* ========================================= */
+
+/* Sección del Instructor */
+.instructor-section {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-violet);
+}
+
+.instructor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.instructor-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.instructor-name {
+  color: var(--strong-blue);
+  font-weight: 600;
+}
+
+.instructor-stats {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+}
+
+/* Estadísticas del Curso */
+.course-stats {
+  background: rgba(248, 249, 250, 0.8);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon i {
+  font-size: 1.2rem;
+}
+
+.stat-content strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--strong-blue);
+}
+
+.stat-content small {
+  font-size: 0.75rem;
+}
+
+/* Preguntas Frecuentes */
+.faq-section {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-violet);
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faq-question {
+  color: var(--strong-blue);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Garantía y Políticas */
+.guarantee-section {
+  background: linear-gradient(135deg, rgba(113, 44, 249, 0.1), rgba(58, 134, 255, 0.1));
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(113, 44, 249, 0.2);
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.guarantee-item i {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+.guarantee-item span {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Media Queries para las nuevas secciones */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .instructor-avatar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .instructor-details {
+    margin-left: 0 !important;
+    margin-top: 0.5rem;
+  }
+  
+  .instructor-section,
+  .course-stats,
+  .faq-section,
+  .guarantee-section {
+    padding: 1rem;
   }
 }

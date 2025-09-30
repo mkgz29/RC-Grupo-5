@@ -114,6 +114,11 @@ hr {
     text-shadow: #0EA5E9 2px 2px 25px;
 }
 
+#loginModal .btn-close {
+    background-color: #dc3545;
+ 
+}
+
 
 #carouselExampleAutoplaying .carousel-inner,
 #carouselExampleAutoplaying .carousel-item {

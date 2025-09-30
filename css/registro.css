@@ -1,0 +1,11 @@
+@import url("https://db.onlinewebfonts.com/c/cdf9e1a785f6767291f7e12174be6174?family=Open+Sauce+One+Regular");
+
+:root {
+    --bs-body-font-family: 'Open Sauce One Regular', sans-serif;
+    --font-family: 'Open Sauce One Regular', sans-serif;
+    --bs-body-bg: #fff;
+}
+
+p {
+    font-family: 'Open Sauce One Regular', sans-serif;
+}

@@ -1,31 +1,81 @@
 /* ========================================= */
-/* CARRITO STYLES - DEVHUB              */
+/* CARRITO STYLES - DEVHUB                  */
 /* ========================================= */
 
 /* Importar fuente personalizada */
 @import url("https://db.onlinewebfonts.com/c/cdf9e1a785f6767291f7e12174be6174?family=Open+Sauce+One+Regular");
 
 /* ========================================= */
-/* VARIABLES CSS                             */
+/* VARIABLES CSS GLOBALES                   */
 /* ========================================= */
+
 :root {
   --header-bg: #6c7b8a;
   --page-title-bg: #9ca3af;
   --primary-blue: #6366f1;
-  --font-family: 'Open Sauce One Regular', sans-serif;
+  
+  /* Sistema de fuentes dual */
+  --font-opensauce: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
+  --font-segoe: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ========================================= */
-/* CONFIGURACIÓN GLOBAL                      */
+/* CONFIGURACIÓN GLOBAL                     */
 /* ========================================= */
+
+/* Configuración base con Segoe UI */
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-segoe);
   scroll-behavior: smooth;
 }
 
-* {
-  font-family: var(--font-family) !important;
+/* ========================================= */
+/* SISTEMA DE FUENTES DUAL                  */
+/* ========================================= */
+
+/* Open Sauce para navegación */
+.navbar,
+.navbar-brand,
+.nav-link,
+.dropdown-item,
+.navbar-text {
+  font-family: var(--font-opensauce);
 }
+
+/* Open Sauce para footer completo */
+footer,
+footer h5,
+footer h6,
+footer p,
+footer a,
+footer li {
+  font-family: var(--font-opensauce);
+}
+
+/* Open Sauce para títulos y destacados */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.fw-bold,
+.fw-semibold,
+.badge {
+  font-family: var(--font-opensauce);
+}
+
+/* Reforzar Segoe UI para contenido */
+.table,
+.table th,
+.table td,
+.card-body p,
+.small,
+.text-muted,
+.form-control,
+.alert {
+  font-family: var(--font-segoe);
+}
+
+/* Clases auxiliares */
+.font-opensauce { font-family: var(--font-opensauce); }
+.font-segoe { font-family: var(--font-segoe); }
 
 /* ========================================= */
 /* COMPONENTES PERSONALIZADOS               */
@@ -39,6 +89,10 @@ body {
 .page-title-custom {
   background-color: var(--page-title-bg) !important;
 }
+
+/* ========================================= */
+/* COMPONENTES PERSONALIZADOS              */
+/* ========================================= */
 
 /* Botones personalizados */
 .btn-primary-custom {
@@ -60,6 +114,7 @@ body {
 
 .course-image-placeholder {
   transition: transform 0.2s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .course-image-placeholder:hover {
@@ -78,12 +133,14 @@ body {
   max-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 /* ========================================= */
-/* NAVBAR PERSONALIZADO                      */
+/* NAVBAR PERSONALIZADO                     */
 /* ========================================= */
 
-/* Navbar con color primary blue */
+/* Navbar con color oscuro (igual que footer) */
 .navbar {
+  background-color: #212529 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
@@ -140,14 +197,14 @@ body {
 }
 
 .navbar .btn-primary {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
   color: white;
 }
 
 .navbar .btn-primary:hover {
-  background-color: #5338f5;
-  border-color: #5338f5;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-toggler {
@@ -159,8 +216,25 @@ body {
 }
 
 
+/* Formularios en navbar */
+.navbar .form-control {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar .form-control:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ========================================= */
-/* MEJORAS UX Y ELEMENTOS INTERACTIVOS      */
+/* MEJORAS UX E INTERACCIONES              */
 /* ========================================= */
 
 /* Tipografía y elementos visuales */
@@ -175,11 +249,12 @@ img.rounded {
 /* Animación suave para botones de eliminar */
 .btn-outline-danger:hover {
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
   transition: all 0.2s ease-in-out;
 }
 
 /* ========================================= */
-/* ESTILOS ADICIONALES                       */
+/* ESTILOS ADICIONALES                     */
 /* ========================================= */
 
 /* Espaciado para navbar fixed */

@@ -12,9 +12,8 @@
   --primary-black: #2b2929;
   --warm-white: #faf9f6;
 }
-.navbar {
-  background-color: var(--warm-white) !important;
-}
+
+
 .navbar-brand {
   color: var(--primary-blue) !important;
 }

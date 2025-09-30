@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/registro.css" />
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid p-0">
+            <div class="row g-0 min-vh-100 align-items-stretch">
+                <div class="col-12 col-md-6 img-col d-none d-md-block p-0">
+                    <img src="assets/img/foto2.jpg" alt="Persona estudiando cursos"
+                        class="img-fluid h-100 w-100 object-fit-cover" />
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center bg-dark text-light p-4">
+                    <div class="w-100 text-center">
+                        <p class="mb-1 text-center text-white fs-3">
+                            Aprenda nuevas habilidades con nuestros cursos
+                        </p>
+                        <form action="procesar_contacto.php" method="POST" autocomplete="on" class="p-1">
+                            <fieldset>
+                                <legend class="col-form-label mb-2 text-center text-white fst-italic">
+                                    Registrese llenando el siguiente formulario
+                                </legend>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput1"
+                                        name="Nombre_y_Apellido" placeholder="Ingresa tu nombre completo"
+                                        autocomplete="name" autofocus
+                                        pattern="^(?=.{2,100}$)[A-Za-zÀ-ÖØ-öø-ÿÑñÇç'’`´]+(?:[ \-'][A-Za-zÀ-ÖØ-öø-ÿÑñÇç'’`´]+)+$"
+                                        title="Al menos 2 palabras las cuales deben ser tu nombre y apellido. Solo letras, espacios, guiones y apóstrofes."
+                                        required />
+                                    <label for="floatingInput1">Nombre y Apellido</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput2"
+                                        name="Nombre_de_Usuario" minlength="3" maxlength="20" pattern="^[A-Za-z0-9_]+$"
+                                        title="Solo letras, números y guion bajo."
+                                        placeholder="Ingresa tu Nombre de Usuario" required />
+                                    <label for="floatingInput2">Nombre de Usuario</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput3" name="Email"
+                                        placeholder="Ejemplo@mail.com" required />
+                                    <label for="floatingInput3">Email</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control rounded-3" id="floatingInput4"
+                                        name="Número_de_Telefono" placeholder="Número de Teléfono" inputmode="tel"
+                                        pattern="^\+?[0-9\s\-]{7,20}$"
+                                        title="Ej: +54 9 11 1234 5678 (números, espacios o -)." required />
+                                    <label for="floatingInput4">Número de Teléfono (Ej. +54 9 11 1234 5678)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3" id="floatingInput5"
+                                        name="Calle_y_número_de_domicilio" placeholder=""
+                                        pattern="^\s*[A-Za-zÑñÁáÉéÍíÓóÚú0-9\.\- ]{2,100}\s+[0-9]{1,5}(?:[\/\-][0-9]{1,4})?(?:,\s*(?:Piso\.?\s*\d{1,3}|Depto(?:\.|amento)?\s*[A-Za-z0-9\-]+|Dpto\.?\s*[A-Za-z0-9\-]+|Pta\.?\s*[A-Za-z0-9\-]+|Torre\.?\s*[A-Za-z0-9\-]+|Unidad\.?\s*[A-Za-z0-9\-]+))?\s*$"
+                                        title="Ej: Av. Siempre Viva 742, Piso 3 o Calle Falsa 123/4. Requiere calle y número; admite piso/depto/torre después de coma"
+                                        required />
+                                    <label for="floatingInput5">Domicilio (calle, número y departamento si
+                                        corresponde)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput6" name="Código_Postal"
+                                        placeholder="Código Postal" inputmode="numeric" pattern="^[0-9]{4,8}$"
+                                        title="Solo números, 4 a 8 dígitos." required />
+                                    <label for="floatingInput6">Código Postal</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingInput7" name="Contraseña"
+                                        minlength="8" maxlength="25" placeholder="Contraseña"
+                                        pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+                                        title="Mínimo 8 caracteres, incluir letras y números." required />
+                                    <label for="floatingInput7">Contraseña (Min. 8 Caracteres)</label>
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-lg w-100 btn-success" type="submit">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </fieldset>
+                            <p class="mb-2">
+                                ¿Ya tienes una cuenta?<a class="p-2" href="#">Inicia sesión</a><br />
+                            </p>
+                            <p class="mb-2">
+                                <a href="#">Olvidé mi contraseña</a>
+                            </p>
+                            <p class="mt-3 small fs-5 fst-italic">
+                                Al hacer clic en «Enviar», aceptas nuestros
+                                <a href="#">Términos de servicio</a> y nuestra
+                                <a href="#">Política de privacidad</a>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

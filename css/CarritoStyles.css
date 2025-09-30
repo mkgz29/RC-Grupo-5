@@ -12,7 +12,7 @@
   --header-bg: #6c7b8a;
   --page-title-bg: #9ca3af;
   --primary-blue: #6366f1;
-  --font-family: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
+  --font-family: 'Open Sauce One Regular', sans-serif;
 }
 
 /* ========================================= */
@@ -84,8 +84,13 @@ body {
 
 /* Navbar con color primary blue */
 .navbar {
-  background-color: var(--primary-blue) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+  padding: 0.5rem 0;
 }
 
 .navbar-brand {
@@ -93,18 +98,29 @@ body {
   font-weight: 600;
 }
 
-.navbar-brand:hover,
-.navbar-brand:focus {
+.navbar-brand:hover {
   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Estilo específico para el texto DevHub */
+.navbar-brand.p {
+  margin: auto;
+  background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-right: 10px;
+  font-weight: 700;
 }
 
 .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
+.navbar-nav .nav-link:hover {
   color: white !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .navbar-nav .nav-link.active {
@@ -112,32 +128,36 @@ body {
   font-weight: 500;
 }
 
+/* Efecto hover para el enlace "Registrarse" */
+.letter:hover {
+  color: rgba(0, 136, 255, 0.677) !important;
+  text-shadow: #0EA5E9 2px 2px 25px;
+}
+
+/* Estilo para subrayado */
+.susbrayado {
+  text-decoration: underline;
+}
+
 .navbar .btn-primary {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
   color: white;
 }
 
 .navbar .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: #5338f5;
+  border-color: #5338f5;
 }
 
-.navbar .form-control {
+.navbar-toggler {
   border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
 }
 
-.navbar .form-control:focus {
-  border-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.15);
+.navbar-toggler:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
 }
 
-.navbar .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
 
 /* ========================================= */
 /* MEJORAS UX Y ELEMENTOS INTERACTIVOS      */
@@ -159,13 +179,76 @@ img.rounded {
 }
 
 /* ========================================= */
+/* ESTILOS ADICIONALES                       */
+/* ========================================= */
+
+/* Espaciado para navbar fixed */
+body {
+  padding-top: 70px;
+}
+
+/* Mejoras para iconos y botones */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: #5338f5;
+  border-color: #5338f5;
+}
+
+/* Badge del carrito */
+.badge {
+  font-size: 0.7rem;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--primary-blue);
+}
+
+/* Form controls en navbar */
+.navbar .form-control {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar .form-control:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================================= */
 /* MEDIA QUERIES - RESPONSIVE               */
 /* ========================================= */
 
-/* Botones más cómodos en mobile */
+/* Ajustes para mobile */
 @media (max-width: 575.98px) {
   .btn {
     padding: .6rem .9rem;
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+  
+  .navbar-brand-text {
+    font-size: 1.1rem;
   }
 }
 
@@ -174,6 +257,43 @@ img.rounded {
   .container-main {
     max-width: 100%;
     box-shadow: none;
+  }
+
+  /* Hover en filas de tabla */
+  table tbody tr:hover {
+    background: #f8f9fa;
+    transition: background-color 0.15s ease-in-out;
+  }
+}
+
+/* Mejoras específicas mobile */
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* Fix para desktop - aside sticky */
+@media (min-width: 992px) {
+  .position-sticky {
+    top: 6rem !important;
+  }
+}
+
+/* Mejoras para tablet y desktop */
+@media (min-width: 768px) {
+  .container-main {
+    max-width: 100%;
+    box-shadow: none;
+    .navbar {
+        position: static;
+        padding: 10px;
+      }
   }
 
   /* Hover en filas de tabla */

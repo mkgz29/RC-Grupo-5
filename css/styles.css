@@ -1,0 +1,256 @@
+/*  Selectores Generales */
+.lettercolor {
+    background: linear-gradient(180deg, #6a2dfa 5%, #3B82F6 50%, #045f8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 6rem;
+    display: inline-block;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+hr {
+    margin-top: 10px;
+    border: 2px solid rgba(0, 136, 255, 0.677);
+}
+
+.bannerp{
+    color: white;
+
+}
+/* Navbar */
+.navbar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+
+.letter:hover{
+    color: rgba(0, 136, 255, 0.677);
+    text-shadow: #0EA5E9 2px 2px 25px;
+}
+
+.navbar-brand.p {
+    margin: auto;
+    background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: static;
+        padding: 10px;
+    }
+}
+
+.susbrayado {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(0, 136, 255, 0.677);
+}
+
+.susbrayado:hover {
+    color: rgba(0, 136, 255, 0.677);
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+
+/* Carrousel Slider */
+
+.slider {
+    width: 30rem;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    box-shadow: #333 0px 4px 8px;
+
+}
+
+.slider:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        width: 20rem;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+}
+
+
+#carouselExampleAutoplaying .carousel-inner,
+#carouselExampleAutoplaying .carousel-item {
+    margin-top: 30px;
+    height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #carouselExampleAutoplaying .carousel-inner,
+    #carouselExampleAutoplaying .carousel-item {
+        margin: auto;
+    }
+
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    ;
+}
+
+
+/* BANNER PROMOCIONAL */
+.banner-promocional {
+    background-image: url(../assets/img/banneroffert.jpg) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-promocional::before {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+
+}
+
+/* Categorias */
+#categorias {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.promotion-circle {
+    position: relative;
+}
+
+.discount-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    margin: 0 auto;
+    transform: rotate(-15deg);
+}
+
+.discount-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.discount-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+
+
+
+
+.col-2 {
+
+    padding: 10px;
+
+}
+
+.col-2:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Destacados */
+
+
+
+
+/* FOOTER */
+footer {
+    border-top: 3px solid rgba(0, 136, 255, 0.677);
+}
+
+footer .social-links a {
+    transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+
+    color: rgba(0, 136, 255, 0.677) !important;
+    transform: scale(1.1);
+}
+
+footer ul li a {
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    text-shadow: rgba(0, 136, 255, 0.677) 1px 1px 5px;
+    color: rgba(0, 136, 255, 0.677) !important;
+    padding-left: 10px;
+}
+
+footer .btn-primary {
+    background-color: rgba(0, 136, 255, 0.677);
+    border-color: rgba(0, 136, 255, 0.677);
+}
+
+footer .btn-danger:hover {
+    background-color: rgba(0, 136, 255, 0.677);
+    border-color: rgba(0, 136, 255, 0.677);
+    transform: scale(1.05);
+}
+
+/* Responsive para footer */
+@media (max-width: 768px) {
+    footer .col-12 {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+
+    footer .social-links {
+        justify-content: center;
+        display: flex;
+    }
+
+    footer form {
+        justify-content: center;
+    }
+}

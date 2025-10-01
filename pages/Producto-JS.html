@@ -1,880 +1,772 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Ecosistema Completo - DevHub</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="css/Productostyles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Ecosistema Completo - DevHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/Logo.png">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/productostyles.css" />
 
-  <body class="d-flex flex-column min-vh-100">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            class="logo"
-            src="/RC-Grupo-5/assets/img/LogoPrincipal.png"
-            alt="Home"
-            width="50"
-            height="50"
-          />
+        <a class="navbar-brand" href="../index.html">
+          <img class="logo" src="../assets/img/LogoPrincipal.png" alt="Home" width="50" height="50" />
         </a>
         <p class="navbar-brand p">DevHub</p>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Inicio</a
-              >
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre nosotros</a>
+              <a class="nav-link" href="./sobre_nosotros.html">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link susbrayado" href="pages/contact.html"
-                >¡Contactanos!</a
-              >
+              <a class="nav-link" href="./contact.html">¡Contactanos!</a>
             </li>
+
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle susbrayado" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Categorias
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="./producto-html.html"> Html & CSS</a></li>
+                <li><a class="dropdown-item subrayado" href="./producto-js.html"> JavaScript & React</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Full Stack Development</a></li>
+                <li><a class="dropdown-item" href="./404.html"> UX/UI Design</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Desarrollo Mobile</a></li>
+                <li><a class="dropdown-item" href="./404.html"> DevOps & Cloud</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Ciberseguridad</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Bases de Datos</a></li>
                 <li>
-                  <a class="dropdown-item" href="#"> Python & Data Science</a>
+                  <hr class="dropdown-divider">
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#"> JavaScript & React</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"> Full Stack Development</a>
-                </li>
-                <li><a class="dropdown-item" href="#"> UX/UI Design</a></li>
-                <li>
-                  <a class="dropdown-item" href="#"> Desarrollo Mobile</a>
-                </li>
-                <li><a class="dropdown-item" href="#"> DevOps & Cloud</a></li>
-                <li><a class="dropdown-item" href="#"> Ciberseguridad</a></li>
-                <li><a class="dropdown-item" href="#"> Bases de Datos</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"> Preguntas Frecuentes</a>
-                </li>
-                <li><a class="dropdown-item" href="#"> Certificaciones</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Preguntas Frecuentes</a></li>
+                <li><a class="dropdown-item" href="./404.html"> Certificaciones</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/contact.html">Iniciar Sesión</a>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar
+                Sesión</a>
             </li>
             <li class="nav-item letter">
-              <a class="nav-link" href="pages/contact.html">Registrarse</a>
+              <a class="nav-link" href="./registro.html">Registrarse</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Buscar"
-              aria-label="Search"
-            />
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="Carrito-Index.html">
-                <img
-                  src="assets/icons/buycarrito.png"
-                  alt="Carrito"
-                  width="43"
-                  height="40"
-                />
-              </a>
+              <a class="nav-link" href="./carrito.html"><img src="../assets/icons/buycarrito.png" alt="" width="43"
+                  height="40" /></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="main-content flex-grow-1">
+    <h1><span class="lettercolor">D</span>etalle de producto</h1>
+    <div class="container py-4">
 
-    <!-- Main Content -->
-    <main class="main-content flex-grow-1">
-      <div class="container my-4">
-        <!-- Card Principal del Producto -->
-        <div class="product-card-horizontal card">
-          <div class="row g-0">
-            <!-- Columna Izquierda: Imagen y Precio -->
-            <div class="col-lg-5 product-left-section">
-              <div class="product-left-content p-4">
-                <!-- Imagen Principal -->
-                <div class="product-image-main">
-                  <img
-                    src="/RC-Grupo-5/assets/img/JS.jpg.jpg"
-                    alt="JavaScript Ecosistema Completo"
-                    class="w-100 h-100 rounded"
-                    style="object-fit: cover"
-                  />
-                </div>
-
-                <!-- Sección de Precio -->
-                <div class="product-price-section">
-                  <div class="price-display">
-                    <div class="price-amount">$35.000 ARS</div>
-                  </div>
-                  <button class="btn btn-buy-main text-white">
-                    Comprar Ahora
-                  </button>
-                </div>
+      <!-- Card Principal del Producto -->
+      <div class="product-card-horizontal card">
+        <div class="row g-0">
+          <!-- Columna Izquierda: Imagen y Precio -->
+          <div class="col-lg-5 product-left-section">
+            <div class="product-left-content p-4">
+              <!-- Imagen Principal -->
+              <div class="product-image-main mb-4">
+                <img src="../assets/img/JS.jpg.jpg" alt="JavaScript Ecosistema Completo" class="w-100 h-100 rounded"
+                  style="object-fit: cover" />
               </div>
-            </div>
 
-            <!-- Columna Derecha: Información del Curso -->
-            <div class="col-lg-7 product-right-section">
-              <div class="product-right-content">
-                <!-- Descripción del Curso -->
-                <h4 class="description-title">
-                  <i class="bi bi-info-circle me-2"></i>Descripción del Curso
-                </h4>
-
-                <p class="description-text">
-                  Domina <span class="highlight">JavaScript ES6+</span>,
-                  <span class="highlight">React</span>,
-                  <span class="highlight">Node.js</span> y las últimas
-                  tecnologías del ecosistema JS para crear aplicaciones web
-                  modernas y escalables.
-                </p>
-
-                <p class="description-text">
-                  <strong>Incluye:</strong> 80+ videos, proyectos reales con
-                  React y Node.js, API REST, bases de datos y certificado de
-                  finalización. ¡Todo lo que necesitas para dominar el
-                  desarrollo JavaScript moderno!
-                </p>
-
-                <hr class="section-divider" />
-
-                <!-- Especificaciones -->
-                <h6 class="section-subtitle text-purple">
-                  <i class="bi bi-list-check me-2"></i>Especificaciones
-                </h6>
-
-                <div class="specs-grid-horizontal mb-4">
-                  <div class="spec-item-horizontal">
-                    <i class="bi bi-clock-fill me-2 text-purple"></i>
-                    <span><strong>40 horas</strong> de contenido</span>
-                  </div>
-                  <div class="spec-item-horizontal">
-                    <i class="bi bi-book-fill me-2 text-purple"></i>
-                    <span><strong>80+ lecciones</strong> prácticas</span>
-                  </div>
-                  <div class="spec-item-horizontal">
-                    <i class="bi bi-code-slash me-2 text-purple"></i>
-                    <span><strong>15+ proyectos</strong> reales</span>
-                  </div>
-                  <div class="spec-item-horizontal">
-                    <i class="bi bi-infinity me-2 text-purple"></i>
-                    <span><strong>Acceso ilimitado</strong> de por vida</span>
-                  </div>
+              <!-- Sección de Precio -->
+              <div class="product-price-section">
+                <div class="price-display">
+                  <div class="price-amount">$35.000 ARS</div>
                 </div>
-
-                <!-- Sección del Instructor -->
-                <div class="instructor-section mb-4">
-                  <h6 class="section-subtitle mb-3">
-                    <i class="bi bi-person-badge me-2"></i>Tu Instructor
-                  </h6>
-                  <div class="instructor-info">
-                    <div class="instructor-avatar mb-3">
-                      <img
-                        src="https://randomuser.me/api/portraits/women/24.jpg"
-                        alt="Ana Martínez"
-                        class="rounded-circle me-3"
-                        width="80"
-                        height="80"
-                      />
-                      <div class="instructor-details">
-                        <div class="instructor-name">Ana Martínez</div>
-                        <small class="text-muted"
-                          >Senior JavaScript Developer</small
-                        >
-                      </div>
-                    </div>
-                    <div class="instructor-stats">
-                      <div class="row text-center">
-                        <div class="col-4">
-                          <small class="text-muted d-block">Experiencia</small>
-                          <strong>7+ años</strong>
-                        </div>
-                        <div class="col-4">
-                          <small class="text-muted d-block">Estudiantes</small>
-                          <strong>4.2k</strong>
-                        </div>
-                        <div class="col-4">
-                          <small class="text-muted d-block">Rating</small>
-                          <strong>4.9⭐</strong>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Estadísticas del Curso -->
-                <div class="course-stats mb-4">
-                  <h6 class="section-subtitle mb-3">
-                    <i class="bi bi-graph-up me-2"></i>Estadísticas del Curso
-                  </h6>
-                  <div class="stats-grid">
-                    <div class="stat-item">
-                      <div class="stat-icon text-warning">
-                        <i class="bi bi-people-fill"></i>
-                      </div>
-                      <div class="stat-content">
-                        <strong>2,150</strong>
-                        <small class="text-muted">estudiantes inscritos</small>
-                      </div>
-                    </div>
-                    <div class="stat-item">
-                      <div class="stat-icon text-success">
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <div class="stat-content">
-                        <strong>4.9/5</strong>
-                        <small class="text-muted">rating promedio</small>
-                      </div>
-                    </div>
-                    <div class="stat-item">
-                      <div class="stat-icon text-info">
-                        <i class="bi bi-trophy-fill"></i>
-                      </div>
-                      <div class="stat-content">
-                        <strong>97%</strong>
-                        <small class="text-muted">tasa de finalización</small>
-                      </div>
-                    </div>
-                    <div class="stat-item">
-                      <div class="stat-icon text-primary">
-                        <i class="bi bi-calendar-event"></i>
-                      </div>
-                      <div class="stat-content">
-                        <strong>Oct 2025</strong>
-                        <small class="text-muted">última actualización</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Preguntas Frecuentes -->
-                <div class="faq-section mb-4">
-                  <h6 class="section-subtitle mb-3">
-                    <i class="bi bi-question-circle me-2"></i>Preguntas
-                    Frecuentes
-                  </h6>
-                  <div class="faq-item">
-                    <strong class="faq-question"
-                      >¿Necesito experiencia previa en JavaScript?</strong
-                    >
-                    <p class="faq-answer">
-                      Se recomienda conocimientos básicos de HTML y CSS. El
-                      curso comienza con fundamentos de JavaScript.
-                    </p>
-                  </div>
-                  <div class="faq-item">
-                    <strong class="faq-question"
-                      >¿Por cuánto tiempo tengo acceso?</strong
-                    >
-                    <p class="faq-answer">
-                      Acceso ilimitado de por vida, incluyendo futuras
-                      actualizaciones del curso.
-                    </p>
-                  </div>
-                  <div class="faq-item">
-                    <strong class="faq-question">¿Incluye certificado?</strong>
-                    <p class="faq-answer">
-                      Sí, recibes un certificado digital al completar el 80% del
-                      contenido del curso.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Garantía y Políticas -->
-                <div class="guarantee-section">
-                  <h6 class="section-subtitle mb-3">
-                    <i class="bi bi-shield-check me-2"></i>Garantía y Políticas
-                  </h6>
-                  <div class="guarantee-item mb-2">
-                    <i class="bi bi-check-circle text-success me-2"></i>
-                    <span
-                      ><strong>30 días de garantía</strong> de devolución del
-                      dinero</span
-                    >
-                  </div>
-                  <div class="guarantee-item mb-2">
-                    <i class="bi bi-infinity text-primary me-2"></i>
-                    <span
-                      ><strong>Acceso de por vida</strong> sin
-                      restricciones</span
-                    >
-                  </div>
-                  <div class="guarantee-item">
-                    <i class="bi bi-arrow-repeat text-info me-2"></i>
-                    <span
-                      ><strong>Actualizaciones gratuitas</strong>
-                      incluidas</span
-                    >
-                  </div>
-                </div>
-
-                <!-- Acordeones de Contenido -->
-                <div class="accordion-section">
-                  <div class="accordion" id="courseAccordion">
-                    <!-- Lo que Aprenderás -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
-                          aria-expanded="false"
-                          aria-controls="collapseOne"
-                        >
-                          <i class="bi bi-lightbulb me-2"></i>
-                          Lo que Aprenderás
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#courseAccordion"
-                      >
-                        <div class="accordion-body">
-                          <ul class="learning-objectives">
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >JavaScript ES6+ moderno y todas sus
-                              características
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Desarrollo de interfaces con React y React Hooks
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Creación de APIs REST con Node.js y Express
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Gestión de bases de datos con MongoDB
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Autenticación JWT y seguridad en aplicaciones
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Deployment en Heroku, Vercel y Netlify
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-success me-2"
-                              ></i
-                              >Testing con Jest y Cypress
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Temario del Curso -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          <i class="bi bi-list-ol me-2"></i>
-                          Temario del Curso
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#courseAccordion"
-                      >
-                        <div class="accordion-body">
-                          <div class="course-syllabus">
-                            <h6>
-                              <i class="bi bi-1-circle me-2"></i>Fundamentos de
-                              JavaScript
-                            </h6>
-                            <ul>
-                              <li>Variables, tipos de datos y operadores</li>
-                              <li>Funciones, scope y closures</li>
-                              <li>Arrays, objetos y destructuring</li>
-                              <li>ES6+: let, const, arrow functions</li>
-                              <li>Promises, async/await y fetch API</li>
-                            </ul>
-
-                            <h6>
-                              <i class="bi bi-2-circle me-2"></i>React
-                              Desarrollo Frontend
-                            </h6>
-                            <ul>
-                              <li>Componentes funcionales y JSX</li>
-                              <li>Props, state y eventos</li>
-                              <li>
-                                React Hooks (useState, useEffect, useContext)
-                              </li>
-                              <li>React Router para SPA</li>
-                              <li>Gestión de estado con Context API</li>
-                            </ul>
-
-                            <h6>
-                              <i class="bi bi-3-circle me-2"></i>Node.js Backend
-                            </h6>
-                            <ul>
-                              <li>Configuración del entorno Node.js</li>
-                              <li>Express.js y middleware</li>
-                              <li>API REST y manejo de rutas</li>
-                              <li>Autenticación JWT</li>
-                              <li>Conexión con MongoDB</li>
-                            </ul>
-
-                            <h6>
-                              <i class="bi bi-4-circle me-2"></i>Proyecto Final
-                              Full Stack
-                            </h6>
-                            <ul>
-                              <li>Aplicación completa MERN Stack</li>
-                              <li>Sistema de usuarios y roles</li>
-                              <li>CRUD completo con interfaz React</li>
-                              <li>Testing y debugging</li>
-                              <li>Deployment en producción</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Proyectos Prácticos -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          <i class="bi bi-code-square me-2"></i>
-                          Proyectos Prácticos
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#courseAccordion"
-                      >
-                        <div class="accordion-body">
-                          <div class="projects-list">
-                            <div class="project-item">
-                              <h6>
-                                <i class="bi bi-globe me-2"></i>Todo App con
-                                React
-                              </h6>
-                              <p>
-                                Aplicación completa de tareas con CRUD, filtros
-                                y localStorage.
-                              </p>
-                            </div>
-                            <div class="project-item">
-                              <h6>
-                                <i class="bi bi-shop me-2"></i>E-commerce
-                                Frontend
-                              </h6>
-                              <p>
-                                Tienda online con carrito de compras, filtros y
-                                sistema de pago.
-                              </p>
-                            </div>
-                            <div class="project-item">
-                              <h6>
-                                <i class="bi bi-server me-2"></i>API REST
-                                Completa
-                              </h6>
-                              <p>
-                                Backend para blog con autenticación, roles y
-                                gestión de contenido.
-                              </p>
-                            </div>
-                            <div class="project-item">
-                              <h6>
-                                <i class="bi bi-chat-dots me-2"></i>Chat en
-                                Tiempo Real
-                              </h6>
-                              <p>
-                                Aplicación de mensajería con Socket.io y React.
-                              </p>
-                            </div>
-                            <div class="project-item">
-                              <h6>
-                                <i class="bi bi-stack me-2"></i>Red Social
-                                Completa
-                              </h6>
-                              <p>
-                                Proyecto final: aplicación MERN con posts,
-                                likes, comentarios y perfiles.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Requisitos -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseFour"
-                          aria-expanded="false"
-                          aria-controls="collapseFour"
-                        >
-                          <i class="bi bi-clipboard-check me-2"></i>
-                          Requisitos
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseFour"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#courseAccordion"
-                      >
-                        <div class="accordion-body">
-                          <ul class="requirements-list">
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Conocimientos básicos de HTML y CSS
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Computadora con Windows, Mac o Linux
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Editor de código (VS Code recomendado)
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Navegador web moderno (Chrome, Firefox, etc.)
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Conexión a internet estable
-                            </li>
-                            <li>
-                              <i
-                                class="bi bi-check-circle text-warning me-2"
-                              ></i
-                              >Ganas de aprender y practicar
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <a href="./carrito.html" class="btn btn-primary btn-buy-main">
+                  Comprar Ahora
+                </a>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Sección de Comentarios -->
-        <div class="comments-horizontal-section">
-          <div class="comments-container">
-            <div
-              id="comentariosCarousel"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <!-- Comentario 1 -->
-                <div class="carousel-item active">
-                  <div class="comment-horizontal-item">
-                    <div class="comment-avatar">
-                      <img
-                        src="https://randomuser.me/api/portraits/women/13.jpg"
-                        alt="Ana García"
-                        class="rounded-circle"
-                      />
-                    </div>
-                    <div class="comment-content">
-                      <p class="comment-text">
-                        "Increíble curso de JavaScript! Los proyectos con React
-                        y Node.js son fantásticos. Aprendí desde ES6+ hasta
-                        crear APIs completas. ¡Totalmente recomendado!"
-                      </p>
-                      <div class="comment-author-rating">
-                        <h6 class="comment-author">Ana García</h6>
-                        <div class="comment-rating">
-                          <span class="text-warning"
-                            >&#9733;&#9733;&#9733;&#9733;&#9733;</span
-                          >
-                          <span class="rating-text">5/5</span>
-                        </div>
-                      </div>
+          <!-- Columna Derecha: Información del Curso -->
+          <div class="col-lg-7 product-right-section">
+            <div class="product-right-content">
+              <!-- Descripción del Curso -->
+              <h4 class="description-title">
+                <i class="bi bi-info-circle me-2"></i>Descripción del Curso
+              </h4>
+
+              <p class="description-text">
+                Domina <span class="highlight">JavaScript ES6+</span>,
+                <span class="highlight">React</span>,
+                <span class="highlight">Node.js</span> y las últimas
+                tecnologías del ecosistema JS para crear aplicaciones web
+                modernas y escalables.
+              </p>
+
+              <p class="description-text">
+                <strong>Incluye:</strong> 80+ videos, proyectos reales con
+                React y Node.js, API REST, bases de datos y certificado de
+                finalización. ¡Todo lo que necesitas para dominar el
+                desarrollo JavaScript moderno!
+              </p>
+
+              <hr class="section-divider" />
+
+              <!-- Especificaciones -->
+              <h6 class="section-subtitle text-purple">
+                <i class="bi bi-list-check me-2"></i>Especificaciones
+              </h6>
+
+              <div class="specs-grid-horizontal mb-4">
+                <div class="spec-item-horizontal">
+                  <i class="bi bi-clock-fill me-2 text-purple"></i>
+                  <span><strong>40 horas</strong> de contenido</span>
+                </div>
+                <div class="spec-item-horizontal">
+                  <i class="bi bi-book-fill me-2 text-purple"></i>
+                  <span><strong>80+ lecciones</strong> prácticas</span>
+                </div>
+                <div class="spec-item-horizontal">
+                  <i class="bi bi-code-slash me-2 text-purple"></i>
+                  <span><strong>15+ proyectos</strong> reales</span>
+                </div>
+                <div class="spec-item-horizontal">
+                  <i class="bi bi-infinity me-2 text-purple"></i>
+                  <span><strong>Acceso ilimitado</strong> de por vida</span>
+                </div>
+              </div>
+
+              <!-- Sección del Instructor -->
+              <div class="instructor-section mb-4">
+                <h6 class="section-subtitle mb-3">
+                  <i class="bi bi-person-badge me-2"></i>Tu Instructor
+                </h6>
+                <div class="instructor-info">
+                  <div class="instructor-avatar mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Ana Martínez"
+                      class="rounded-circle me-3" width="80" height="80" />
+                    <div class="instructor-details">
+                      <div class="instructor-name">Ana Martínez</div>
+                      <small class="text-muted">Senior JavaScript Developer</small>
                     </div>
                   </div>
-                </div>
-
-                <!-- Comentario 2 -->
-                <div class="carousel-item">
-                  <div class="comment-horizontal-item">
-                    <div class="comment-avatar">
-                      <img
-                        src="https://randomuser.me/api/portraits/men/3.jpg"
-                        alt="Luis Rodríguez"
-                        class="rounded-circle"
-                      />
-                    </div>
-                    <div class="comment-content">
-                      <p class="comment-text">
-                        "El mejor curso de JavaScript que he tomado. La
-                        explicación de async/await y Promises es excelente. Los
-                        proyectos reales me ayudaron mucho en mi trabajo."
-                      </p>
-                      <div class="comment-author-rating">
-                        <h6 class="comment-author">Luis Rodríguez</h6>
-                        <div class="comment-rating">
-                          <span class="text-warning"
-                            >&#9733;&#9733;&#9733;&#9733;&#9733;</span
-                          >
-                          <span class="rating-text">5/5</span>
-                        </div>
+                  <div class="instructor-stats">
+                    <div class="row text-center">
+                      <div class="col-4">
+                        <small class="text-muted d-block">Experiencia</small>
+                        <strong>7+ años</strong>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Comentario 3 -->
-                <div class="carousel-item">
-                  <div class="comment-horizontal-item">
-                    <div class="comment-avatar">
-                      <img
-                        src="https://randomuser.me/api/portraits/women/84.jpg"
-                        alt="Marta Silva"
-                        class="rounded-circle"
-                      />
-                    </div>
-                    <div class="comment-content">
-                      <p class="comment-text">
-                        "Gracias a este curso domino el stack MERN completo. La
-                        red social que construimos fue increíble. Ahora trabajo
-                        como desarrolladora full stack JavaScript!"
-                      </p>
-                      <div class="comment-author-rating">
-                        <h6 class="comment-author">Marta Silva</h6>
-                        <div class="comment-rating">
-                          <span class="text-warning"
-                            >&#9733;&#9733;&#9733;&#9733;&#9733;</span
-                          >
-                          <span class="rating-text">5/5</span>
-                        </div>
+                      <div class="col-4">
+                        <small class="text-muted d-block">Estudiantes</small>
+                        <strong>4.2k</strong>
+                      </div>
+                      <div class="col-4">
+                        <small class="text-muted d-block">Rating</small>
+                        <strong>4.9⭐</strong>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Carousel Controls -->
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#comentariosCarousel"
-                data-bs-slide="prev"
-              >
-                <i class="bi bi-chevron-left text-dark"></i>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#comentariosCarousel"
-                data-bs-slide="next"
-              >
-                <i class="bi bi-chevron-right text-dark"></i>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+              <!-- Estadísticas del Curso -->
+              <div class="course-stats mb-4">
+                <h6 class="section-subtitle mb-3">
+                  <i class="bi bi-graph-up me-2"></i>Estadísticas del Curso
+                </h6>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-icon text-warning">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <strong>2,150</strong>
+                      <small class="text-muted">estudiantes inscritos</small>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon text-success">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <strong>4.9/5</strong>
+                      <small class="text-muted">rating promedio</small>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon text-info">
+                      <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <strong>97%</strong>
+                      <small class="text-muted">tasa de finalización</small>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon text-primary">
+                      <i class="bi bi-calendar-event"></i>
+                    </div>
+                    <div class="stat-content">
+                      <strong>Oct 2025</strong>
+                      <small class="text-muted">última actualización</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Preguntas Frecuentes -->
+              <div class="faq-section mb-4">
+                <h6 class="section-subtitle mb-3">
+                  <i class="bi bi-question-circle me-2"></i>Preguntas
+                  Frecuentes
+                </h6>
+                <div class="faq-item">
+                  <strong class="faq-question">¿Necesito experiencia previa en JavaScript?</strong>
+                  <p class="faq-answer">
+                    Se recomienda conocimientos básicos de HTML y CSS. El
+                    curso comienza con fundamentos de JavaScript.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <strong class="faq-question">¿Por cuánto tiempo tengo acceso?</strong>
+                  <p class="faq-answer">
+                    Acceso ilimitado de por vida, incluyendo futuras
+                    actualizaciones del curso.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <strong class="faq-question">¿Incluye certificado?</strong>
+                  <p class="faq-answer">
+                    Sí, recibes un certificado digital al completar el 80% del
+                    contenido del curso.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Garantía y Políticas -->
+              <div class="guarantee-section">
+                <h6 class="section-subtitle mb-3">
+                  <i class="bi bi-shield-check me-2"></i>Garantía y Políticas
+                </h6>
+                <div class="guarantee-item mb-2">
+                  <i class="bi bi-check-circle text-success me-2"></i>
+                  <span><strong>30 días de garantía</strong> de devolución del
+                    dinero</span>
+                </div>
+                <div class="guarantee-item mb-2">
+                  <i class="bi bi-infinity text-primary me-2"></i>
+                  <span><strong>Acceso de por vida</strong> sin
+                    restricciones</span>
+                </div>
+                <div class="guarantee-item">
+                  <i class="bi bi-arrow-repeat text-info me-2"></i>
+                  <span><strong>Actualizaciones gratuitas</strong>
+                    incluidas</span>
+                </div>
+              </div>
+
+              <!-- Acordeones de Contenido -->
+              <div class="accordion-section">
+                <div class="accordion" id="courseAccordion">
+                  <!-- Lo que Aprenderás -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <i class="bi bi-lightbulb me-2"></i>
+                        Lo que Aprenderás
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <ul class="learning-objectives">
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>JavaScript ES6+ moderno y todas sus
+                            características
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Desarrollo de interfaces con React y
+                            React Hooks
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Creación de APIs REST con Node.js y
+                            Express
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Gestión de bases de datos con MongoDB
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Autenticación JWT y seguridad en
+                            aplicaciones
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Deployment en Heroku, Vercel y Netlify
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-success me-2"></i>Testing con Jest y Cypress
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Temario del Curso -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="bi bi-list-ol me-2"></i>
+                        Temario del Curso
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <div class="course-syllabus">
+                          <h6>
+                            <i class="bi bi-1-circle me-2"></i>Fundamentos de
+                            JavaScript
+                          </h6>
+                          <ul>
+                            <li>Variables, tipos de datos y operadores</li>
+                            <li>Funciones, scope y closures</li>
+                            <li>Arrays, objetos y destructuring</li>
+                            <li>ES6+: let, const, arrow functions</li>
+                            <li>Promises, async/await y fetch API</li>
+                          </ul>
+
+                          <h6>
+                            <i class="bi bi-2-circle me-2"></i>React
+                            Desarrollo Frontend
+                          </h6>
+                          <ul>
+                            <li>Componentes funcionales y JSX</li>
+                            <li>Props, state y eventos</li>
+                            <li>
+                              React Hooks (useState, useEffect, useContext)
+                            </li>
+                            <li>React Router para SPA</li>
+                            <li>Gestión de estado con Context API</li>
+                          </ul>
+
+                          <h6>
+                            <i class="bi bi-3-circle me-2"></i>Node.js Backend
+                          </h6>
+                          <ul>
+                            <li>Configuración del entorno Node.js</li>
+                            <li>Express.js y middleware</li>
+                            <li>API REST y manejo de rutas</li>
+                            <li>Autenticación JWT</li>
+                            <li>Conexión con MongoDB</li>
+                          </ul>
+
+                          <h6>
+                            <i class="bi bi-4-circle me-2"></i>Proyecto Final
+                            Full Stack
+                          </h6>
+                          <ul>
+                            <li>Aplicación completa MERN Stack</li>
+                            <li>Sistema de usuarios y roles</li>
+                            <li>CRUD completo con interfaz React</li>
+                            <li>Testing y debugging</li>
+                            <li>Deployment en producción</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Proyectos Prácticos -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="bi bi-code-square me-2"></i>
+                        Proyectos Prácticos
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <div class="projects-list">
+                          <div class="project-item">
+                            <h6>
+                              <i class="bi bi-globe me-2"></i>Todo App con
+                              React
+                            </h6>
+                            <p>
+                              Aplicación completa de tareas con CRUD, filtros
+                              y localStorage.
+                            </p>
+                          </div>
+                          <div class="project-item">
+                            <h6>
+                              <i class="bi bi-shop me-2"></i>E-commerce
+                              Frontend
+                            </h6>
+                            <p>
+                              Tienda online con carrito de compras, filtros y
+                              sistema de pago.
+                            </p>
+                          </div>
+                          <div class="project-item">
+                            <h6>
+                              <i class="bi bi-server me-2"></i>API REST
+                              Completa
+                            </h6>
+                            <p>
+                              Backend para blog con autenticación, roles y
+                              gestión de contenido.
+                            </p>
+                          </div>
+                          <div class="project-item">
+                            <h6>
+                              <i class="bi bi-chat-dots me-2"></i>Chat en
+                              Tiempo Real
+                            </h6>
+                            <p>
+                              Aplicación de mensajería con Socket.io y React.
+                            </p>
+                          </div>
+                          <div class="project-item">
+                            <h6>
+                              <i class="bi bi-stack me-2"></i>Red Social
+                              Completa
+                            </h6>
+                            <p>
+                              Proyecto final: aplicación MERN con posts,
+                              likes, comentarios y perfiles.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Requisitos -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <i class="bi bi-clipboard-check me-2"></i>
+                        Requisitos
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                      <div class="accordion-body">
+                        <ul class="requirements-list">
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Conocimientos básicos de HTML y CSS
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Computadora con Windows, Mac o Linux
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Editor de código (VS Code recomendado)
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Navegador web moderno (Chrome, Firefox,
+                            etc.)
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Conexión a internet estable
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle text-warning me-2"></i>Ganas de aprender y practicar
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-3 mt-3">
-        <div class="container">
-            <div class="row">
-                <!-- Columna 1: Enlaces Útiles -->
-                <div class="col-lg-4 col-md-4 col-12 mb-4">
-                    <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
-                                <i class="bi bi-chevron-right me-2"></i>Comunidad
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
-                                <i class="bi bi-chevron-right me-2"></i>Guías & Tutoriales
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
-                                <i class="bi bi-chevron-right me-2"></i>Política de Privacidad
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
-                                <i class="bi bi-chevron-right me-2"></i>Preguntas Frecuentes
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
-                                <i class="bi bi-chevron-right me-2"></i>Soporte Técnico
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
-                <!-- Columna 2: Social Links -->
-                <div class="col-lg-4 col-md-4 col-12 mb-4 text-center">
-                    <h5 class="fw-bold mb-3">Síguenos</h5>
-                    <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" class="text-light me-3 fs-4 social-link">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="text-light me-3 fs-4 social-link">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="text-light me-3 fs-4 social-link">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="text-light fs-4 social-link">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="mt-3">
-                        <img src="../assets/img/Logo.png" alt="DevHub Logo" height="60" width="60" class="mb-2">
-                        <p class="small text-light-emphasis">DevHub - Aprende Programación</p>
-                    </div>
-                </div>
-
-                <!-- Columna 3: Contacto -->
-                <div class="col-lg-4 col-md-4 col-12 mb-4">
-                    <h5 class="fw-bold mb-3">Contacto</h5>
-                    <div class="mb-3">
-                        <p class="mb-2">
-                            <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
-                            25 de Mayo 455, San Miguel de Tucumán, Argentina
-                        </p>
-                        <p class="mb-2">
-                            <i class="bi bi-telephone-fill me-2 text-primary"></i>
-                            +54 11 1234-5678
-                        </p>
-                        <p class="mb-3">
-                            <i class="bi bi-envelope-fill me-2 text-primary"></i>
-                            devhub@rollingcode.com
-                        </p>
-                    </div>
-                    <h6 class="fw-bold mb-2">Newsletter</h6>
-                    <p class="small text-light-emphasis mb-3">
-                        Suscríbete para recibir ofertas exclusivas
+      <!-- Sección de Comentarios -->
+      <div class="comments-horizontal-section">
+        <div class="comments-container">
+          <div id="comentariosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Comentario 1 -->
+              <div class="carousel-item active">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana García"
+                      class="rounded-circle" />
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">
+                      "Increíble curso de JavaScript! Los proyectos con React
+                      y Node.js son fantásticos. Aprendí desde ES6+ hasta
+                      crear APIs completas. ¡Totalmente recomendado!"
                     </p>
-                    <form class="d-flex">
-                        <input type="email" class="form-control me-2" placeholder="Tu email...">
-                        <button class="btn btn-primary" type="submit">
-                            <i class="bi bi-send"></i>
-                        </button>
-                    </form>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Ana García</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Comentario 2 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis Rodríguez"
+                      class="rounded-circle" />
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">
+                      "El mejor curso de JavaScript que he tomado. La
+                      explicación de async/await y Promises es excelente. Los
+                      proyectos reales me ayudaron mucho en mi trabajo."
+                    </p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Luis Rodríguez</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comentario 3 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta Silva"
+                      class="rounded-circle" />
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">
+                      "Gracias a este curso domino el stack MERN completo. La
+                      red social que construimos fue increíble. Ahora trabajo
+                      como desarrolladora full stack JavaScript!"
+                    </p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Marta Silva</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <hr class="my-2 border-secondary">
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel"
+              data-bs-slide="prev">
+              <i class="bi bi-chevron-left text-dark"></i>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel"
+              data-bs-slide="next">
+              <i class="bi bi-chevron-right text-dark"></i>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 mt-3">
+    <div class="container">
+      <div class="row">
+        <!-- Columna 1: Enlaces Útiles -->
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+          <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="./404.html" class="text-light-emphasis text-decoration-none">
+                <i class="bi bi-chevron-right me-2"></i>Comunidad
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="./404.html" class="text-light-emphasis text-decoration-none">
+                <i class="bi bi-chevron-right me-2"></i>Guías & Tutoriales
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="./404.html" class="text-light-emphasis text-decoration-none">
+                <i class="bi bi-chevron-right me-2"></i>Política de Privacidad
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="./404.html" class="text-light-emphasis text-decoration-none">
+                <i class="bi bi-chevron-right me-2"></i>Preguntas Frecuentes
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="./404.html" class="text-light-emphasis text-decoration-none">
+                <i class="bi bi-chevron-right me-2"></i>Soporte Técnico
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <!-- Copyright -->
-            <div class="row align-items-center">
-                <div class="col-md-6 col-12 text-center text-md-start">
-                    <p class="mb-0 text-light-emphasis">
-                        &copy; 2025 Rolling Code - Grupo 5. Todos los derechos reservados.
-                    </p>
+        <!-- Columna 2: Social Links -->
+        <div class="col-lg-4 col-md-4 col-12 mb-4 text-center">
+          <h5 class="fw-bold mb-3">Síguenos</h5>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="text-light me-3 fs-4 social-link">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-light me-3 fs-4 social-link">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-light me-3 fs-4 social-link">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="text-light fs-4 social-link">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+          <div class="mt-3">
+            <img src="../assets/img/Logo.png" alt="DevHub Logo" height="60" width="60" class="mb-2">
+            <p class="small text-light-emphasis">DevHub - Aprende Programación</p>
+          </div>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+          <h5 class="fw-bold mb-3">Contacto</h5>
+          <div class="mb-3">
+            <p class="mb-2">
+              <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+              25 de Mayo 455, San Miguel de Tucumán, Argentina
+            </p>
+            <p class="mb-2">
+              <i class="bi bi-telephone-fill me-2 text-primary"></i>
+              +54 11 1234-5678
+            </p>
+            <p class="mb-3">
+              <i class="bi bi-envelope-fill me-2 text-primary"></i>
+              devhub@rollingcode.com
+            </p>
+          </div>
+          <h6 class="fw-bold mb-2">Newsletter</h6>
+          <p class="small text-light-emphasis mb-3">
+            Suscríbete para recibir ofertas exclusivas
+          </p>
+          <form class="d-flex">
+            <input type="email" class="form-control me-2" placeholder="Tu email...">
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary">
+
+      <!-- Copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 col-12 text-center text-md-start">
+          <p class="mb-0 text-light-emphasis">
+            &copy; 2025 Rolling Code - Grupo 5. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 col-12 text-center text-md-end">
+          <small class="text-light-emphasis">
+            Desarrollado con por <strong class="text-primary">Equipo DevHub</strong>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6 col-12 text-center text-md-end">
-                    <small class="text-light-emphasis">
-                        Desarrollado con  por <strong class="text-primary">Equipo DevHub</strong>
-                    </small>
+                <div class="modal-body p-5 pt-0 text-center">
+                    <div class="w-100 mb-3">
+                        <h1 class="fw-bold mb-0 fs-4 justify-content-center d-flex mb-3  modal-title">
+                            Bienvenido a DevHub &lt;/&gt;
+                        </h1>
+                        <p class="text mb-0 text-center modal-title">Inicia sesión para continuar</p>
+                    </div>
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingInput"
+                                placeholder="name@example.com" autofocus />
+                            <label for="floatingInput">Dirección de correo electrónico</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                placeholder="Password" />
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+                        <div class="form-check m-3 text-start text-muted">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label modal-title" for="gridCheck">
+                                Recordarme
+                            </label>
+                        </div>
+                        <a href="./404.html" class="w-100 mb-2 btn btn-primary rounded-3 btn-lg fw-bold">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Iniciar sesión
+                        </a>
+                        <h2 class="fs-5 fw-bold mb-3 text-center">ó</h2>
+                        <a href="./404.html" class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3">
+                            <i class="bi bi-google"></i>
+                            Continuar con Google
+                        </a>
+                        <a href="./404.html" class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3">
+                            <i class="bi bi-facebook"></i>
+                            Continuar con Facebook
+                        </a>
+                        <a href="./404.html" class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3">
+                            <i class="bi bi-github"></i>
+                            Continuar con Github
+                        </a>
+                    </form>
+                    <p class="text-muted mt-3">¿Aún no tienes una cuenta?</p>
+                    <p><a href="./registro.html" class="text-primary">Regístrate aquí</a></p>
+                    <a href="./404.html" class="text-decoration-none text-primary">
+                        ¿Olvidaste tu contraseña?
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
 </html>

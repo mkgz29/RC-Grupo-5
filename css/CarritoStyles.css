@@ -23,7 +23,16 @@ body {
   scroll-behavior: smooth;
 }
 
+.container{
+  margin-top: 80px;
+}
 
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 0;
+  }
+  
+}
 
 /* Open Sauce para títulos y destacados */
 h1, h2, h3, h4, h5, h6,

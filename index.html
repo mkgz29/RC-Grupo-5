@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="/assets/img/Logo.png">
+    <link rel="icon" type="image/x-icon" href="./assets/img/Logo.png">
     <link rel="stylesheet" href="./css/styles.css">
 
     <title>DevHub</title>
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img class="logo" src="/assets/img/Logo.png" alt="Home" width="50" height="50">
+                    <img class="logo" src="./assets/img/Logo.png" alt="Home" width="50" height="50">
                 </a>
                 <p class="navbar-brand p">DevHub</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -32,7 +32,7 @@
                             <a class="nav-link active susbrayado" aria-current="page" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre nosotros</a>
+                            <a class="nav-link" href="./pages/sobre_nosotros.html">Sobre nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/contact.html">¡Contactanos!</a>
@@ -45,7 +45,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="./pages/producto-html.html"> Html & CSS</a></li>
-                                <li><a class="dropdown-item" href="./pages/producto-js.html"> JavaScript & React</a></li>
+                                <li><a class="dropdown-item" href="./pages/producto-js.html"> JavaScript & React</a>
+                                </li>
                                 <li><a class="dropdown-item" href="./pages/404.html"> Full Stack Development</a></li>
                                 <li><a class="dropdown-item" href="./pages/404.html"> UX/UI Design</a></li>
                                 <li><a class="dropdown-item" href="./pages/404.html"> Desarrollo Mobile</a></li>
@@ -73,7 +74,8 @@
                     </form>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/carrito.html"><img src="./assets/icons/buycarrito.png" alt="Carrito de compras" width="43" height="40"></a>
+                            <a class="nav-link" href="./pages/carrito.html"><img src="./assets/icons/buycarrito.png"
+                                    alt="Carrito de compras" width="43" height="40"></a>
 
                         </li>
 
@@ -87,15 +89,15 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner ">
                 <div class="carousel-item active  ">
-                    <img src="./assets/img/Slider1.jpg" class="d-block w-100" alt="Programacion">
+                    <img src="./assets/img/Slider11.jpg" class="d-block w-100" alt="Programacion">
 
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/img/Slider2.jpg" class="d-block w-100" alt="...">
+                    <img src="./assets/img/Slider22.jpg" class="d-block w-100" alt="...">
 
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/img/Slider3.jpg" class="d-block w-100" alt="...">
+                    <img src="./assets/img/Slider33.jpg" class="d-block w-100" alt="...">
 
                 </div>
             </div>
@@ -119,25 +121,25 @@
                 <div class="col-lg-4 col-12 mb-4">
                     <h1><span class="lettercolor">C</span>ategorías</h1>
                     <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             <i class="bi bi-grid-3x3-gap me-2"></i>Todos los Cursos
-                        </button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-code-slash me-2"></i>Desarrollo Web</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-phone me-2"></i>Desarrollo Mobile</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-graph-up-arrow me-2"></i>Python & Data Science</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-server me-2"></i>Java & Backend</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-palette me-2"></i>React & Frontend</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-database me-2"></i>Bases de Datos</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-shield-lock me-2"></i>Ciberseguridad</button>
-                        <button type="button" class="list-group-item list-group-item-action">
-                            <i class="bi bi-cloud-arrow-up me-2"></i>DevOps & Cloud</button>
+                        </a>
+                        <a href="./pages/producto-html.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-code-slash me-2"></i>Html & Css</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-phone me-2"></i>Desarrollo Mobile</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-graph-up-arrow me-2"></i>Python & Data Science</a>
+                        <a href="./pages/producto-js.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-server me-2"></i>Java & Backend</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-palette me-2"></i>React & Frontend</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-database me-2"></i>Bases de Datos</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-shield-lock me-2"></i>Ciberseguridad</a>
+                        <a href="./pages/404.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-cloud-arrow-up me-2"></i>DevOps & Cloud</a>
                     </div>
                 </div>
                 <!-- Banner Promocional -->
@@ -159,9 +161,9 @@
                                         <span class="text-white-50">Código: <strong
                                                 class="text-warning">ROLLING50</strong></span>
                                     </div>
-                                    <button class="btn btn-warning btn-lg fw-bold px-4">
+                                    <a href="./pages/404.html" class="btn btn-warning btn-lg fw-bold px-4">
                                         <i class="bi bi-cart-plus me-2"></i>Aprovechar Oferta
-                                    </button>
+                                    </a>
                             </div>
                             <div class="col-md-4 text-center">
                                 <div class="promotion-circle">
@@ -189,7 +191,7 @@
                             <p class="card-text flex-grow-1">Aprende Python desde cero hasta nivel avanzado. Incluye
                                 programación
                                 orientada a objetos, frameworks web y análisis de datos.</p>
-                            <a href="#" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
+                            <a href="./pages/404.html" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -201,7 +203,8 @@
                             <p class="card-text flex-grow-1">Domina JavaScript ES6+, React, Node.js y las últimas
                                 tecnologías del
                                 ecosistema JS para crear aplicaciones web.</p>
-                            <a href="#" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
+                            <a href="./pages/producto-js.html" class="btn btn-primary dest mt-auto">Inscribirse
+                                Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -212,7 +215,8 @@
                             <h5 class="card-title">HTML Completo</h5>
                             <p class="card-text flex-grow-1">Aprende HTML desde los fundamentos básicos hasta técnicas
                                 avanzadas. Estructura web, semántica, formularios y mejores prácticas.</p>
-                            <a href="./pages/producto-html.html" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
+                            <a href="./pages/producto-html.html" class="btn btn-primary dest mt-auto">Inscribirse
+                                Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -224,7 +228,7 @@
                             <p class="card-text flex-grow-1">Crea experiencias digitales excepcionales. Investigación de
                                 usuarios,
                                 prototipado, Figma y diseño centrado en el usuario.</p>
-                            <a href="#" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
+                            <a href="./pages/404.html" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +240,7 @@
                             <p class="card-text flex-grow-1">Analiza y visualiza datos como un experto. Machine
                                 Learning,
                                 inteligencia artificial, estadística con Python y R.</p>
-                            <a href="#" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
+                            <a href="./pages/404.html" class="btn btn-primary dest mt-auto">Inscribirse Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -338,12 +342,12 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-12 text-center text-md-start">
                     <p class="mb-0 text-light-emphasis">
-                        &copy; 2025 Rolling Code - Grupo 5. Todos los derechos reservados.
+                        &copy; 2025 Rolling Code - Grupo 5.
                     </p>
                 </div>
                 <div class="col-md-6 col-12 text-center text-md-end">
                     <small class="text-light-emphasis">
-                        Desarrollado con  por <strong class="text-primary">Equipo DevHub</strong>
+                        Desarrollado con por <strong class="text-primary">Equipo DevHub</strong>
                     </small>
                 </div>
             </div>
@@ -366,7 +370,7 @@
                         <h1 class="fw-bold mb-0 fs-4 justify-content-center d-flex mb-3  modal-title">
                             Bienvenido a DevHub &lt;/&gt;
                         </h1>
-                        <p class="text-muted mb-0 text-center">Inicia sesión para continuar</p>
+                        <p class="text mb-0 text-center modal-title">Inicia sesión para continuar</p>
                     </div>
                     <form class="">
                         <div class="form-floating mb-3">
@@ -385,27 +389,27 @@
                                 Recordarme
                             </label>
                         </div>
-                        <button class="w-100 mb-2 btn btn-primary rounded-3 btn-primary btn-lg fw-bold" type="submit">
+                        <a href="./pages/404.html" class="w-100 mb-2 btn btn-primary rounded-3 btn-lg fw-bold">
                             <i class="bi bi-box-arrow-in-right"></i>
                             Iniciar sesión
-                        </button>
+                        </a>
                         <h2 class="fs-5 fw-bold mb-3 text-center">ó</h2>
-                        <button class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3" type="button">
+                        <a href="./pages/404.html" class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3">
                             <i class="bi bi-google"></i>
                             Continuar con Google
-                        </button>
-                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="button">
+                        </a>
+                        <a href="./pages/404.html" class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3">
                             <i class="bi bi-facebook"></i>
                             Continuar con Facebook
-                        </button>
-                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="button">
+                        </a>
+                        <a href="./pages/404.html" class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3">
                             <i class="bi bi-github"></i>
                             Continuar con Github
-                        </button>
+                        </a>
                     </form>
                     <p class="text-muted mt-3">¿Aún no tienes una cuenta?</p>
-                    <p><a href="#" class="text-primary">Regístrate aquí</a></p>
-                    <a href="#" class="text-decoration-none text-primary">
+                    <p><a href="./pages/registro.html" class="text-primary">Regístrate aquí</a></p>
+                    <a href="./pages/404.html" class="text-decoration-none text-primary">
                         ¿Olvidaste tu contraseña?
                     </a>
                 </div>

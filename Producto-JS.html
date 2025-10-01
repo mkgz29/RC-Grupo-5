@@ -16,7 +16,7 @@
 <body class="d-flex flex-column min-vh-100">
   
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img class="logo" src="/IMG/LogoPrincipal.png" alt="Home" width="50" height="50" />
@@ -417,9 +417,87 @@
         </div>
       </div>
 
+      <!-- Sección de Comentarios -->
+      <div class="comments-horizontal-section">
+        <div class="comments-container">          
+          <div id="comentariosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              
+              <!-- Comentario 1 -->
+              <div class="carousel-item active">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Ana García" class="rounded-circle">
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"Increíble curso de JavaScript! Los proyectos con React y Node.js son fantásticos. Aprendí desde ES6+ hasta crear APIs completas. ¡Totalmente recomendado!"</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Ana García</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comentario 2 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Luis Rodríguez" class="rounded-circle">
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"El mejor curso de JavaScript que he tomado. La explicación de async/await y Promises es excelente. Los proyectos reales me ayudaron mucho en mi trabajo."</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Luis Rodríguez</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comentario 3 -->
+              <div class="carousel-item">
+                <div class="comment-horizontal-item">
+                  <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Marta Silva" class="rounded-circle">
+                  </div>
+                  <div class="comment-content">
+                    <p class="comment-text">"Gracias a este curso domino el stack MERN completo. La red social que construimos fue increíble. Ahora trabajo como desarrolladora full stack JavaScript!"</p>
+                    <div class="comment-author-rating">
+                      <h6 class="comment-author">Marta Silva</h6>
+                      <div class="comment-rating">
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="prev">
+              <i class="bi bi-chevron-left text-dark"></i>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarousel" data-bs-slide="next">
+              <i class="bi bi-chevron-right text-dark"></i>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+      
     </div>
   </main>
-
   <!-- Footer -->
   <footer class="bg-dark text-light py-3 mt-3 small">
     <div class="container">

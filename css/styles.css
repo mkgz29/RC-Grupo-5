@@ -271,3 +271,10 @@ footer .btn-danger:hover {
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contacth2 {
+        font-size: 3rem;
+    }
+    
+}

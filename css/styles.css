@@ -49,6 +49,7 @@ hr {
 }
 
 .navbar-brand.p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
     -webkit-background-clip: text;

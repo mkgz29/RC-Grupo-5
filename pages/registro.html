@@ -8,15 +8,86 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/registro.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/registro.css" />
+
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo" src="../assets/img/Logo.png" alt="Home" width="50" height="50">
+                </a>
+                <p class="navbar-brand p">DevHub</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active susbrayado" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">¡Contactanos!</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> Python & Data Science</a></li>
+                                <li><a class="dropdown-item" href="#"> JavaScript & React</a></li>
+                                <li><a class="dropdown-item" href="#"> Full Stack Development</a></li>
+                                <li><a class="dropdown-item" href="#"> UX/UI Design</a></li>
+                                <li><a class="dropdown-item" href="#"> Desarrollo Mobile</a></li>
+                                <li><a class="dropdown-item" href="#"> DevOps & Cloud</a></li>
+                                <li><a class="dropdown-item" href="#"> Ciberseguridad</a></li>
+                                <li><a class="dropdown-item" href="#"> Bases de Datos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"> Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="#"> Certificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar
+                                Sesión</a>
+                        </li>
+                        <li class="nav-item letter">
+                            <a class="nav-link susbrayado" href="./registro.html">Registrarse</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 " type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="/assets/icons/buycarrito.png" alt="" width="43"
+                                    height="40"></a>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="container-fluid p-0">
             <div class="row g-0 align-items-stretch">
                 <div class=" col-12 col-lg-6 vh-100 d-none d-none d-lg-block p-0">
-                    <img src="assets/img/devhubregistro.webp" alt="Imagen con logo DevHub"
+                    <img src="/assets/img/devhubregistro.webp" alt="Imagen con logo DevHub"
                         class="w-100 h-100 object-fit-cover d-block" />
                 </div>
                 <div class="col-12 col-lg-6 d-flex align-items-start justify-content-center bg-dark text-light p-4 overflow-auto"
@@ -184,7 +255,8 @@
                                                     <i class="bi bi-envelope"></i> Codigo Postal
                                                 </label>
                                                 <div class="invalid-feedback">
-                                                    Código postal: 3–10 caracteres. Se permiten letras, números, espacios y guiones (ej: 94103, SW1A 1AA).
+                                                    Código postal: 3–10 caracteres. Se permiten letras, números,
+                                                    espacios y guiones (ej: 94103, SW1A 1AA).
                                                 </div>
                                             </div>
                                         </div>
@@ -201,8 +273,8 @@
                                         <div class="mb-3">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" id="usuario"
-                                                    placeholder="nombre_usuario" required minlength="3"
-                                                    maxlength="20" pattern="^[a-zA-Z0-9_]+$" autocomplete="username"
+                                                    placeholder="nombre_usuario" required minlength="3" maxlength="20"
+                                                    pattern="^[a-zA-Z0-9_]+$" autocomplete="username"
                                                     title="3-20 caracteres: solo letras, números y guión bajo">
                                                 <label for="usuario">
                                                     <i class="bi bi-at me-1"></i>Nombre de Usuario
@@ -218,16 +290,17 @@
                                         </div>
                                         <div class="mb-3">
                                             <div class="form-floating">
-                                                <input type="password" class="form-control" id="password" name="password"
-                                                    placeholder="Contraseña" required minlength="8" maxlength="64"
-                                                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                                                <input type="password" class="form-control" id="password"
+                                                    name="password" placeholder="Contraseña" required minlength="8"
+                                                    maxlength="64" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                                                     title="La contraseña debe tener al menos 8 caracteres e incluir al menos una letra y un número."
                                                     autocomplete="new-password">
                                                 <label for="password">
                                                     <i class="bi bi-lock me-1"></i>Contraseña
                                                 </label>
                                                 <div class="invalid-feedback">
-                                                    La contraseña debe tener al menos 8 caracteres e incluir al menos una letra y un número.
+                                                    La contraseña debe tener al menos 8 caracteres e incluir al menos
+                                                    una letra y un número.
                                                 </div>
                                             </div>
                                             <div class="form-text">
@@ -237,9 +310,9 @@
                                         </div>
                                         <div class="mb-3">
                                             <div class="form-floating">
-                                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-                                                    placeholder="Confirmar contraseña" required title="Las contraseñas deben coincidir"
-                                                    autocomplete="new-password">
+                                                <input type="password" class="form-control" id="confirmPassword"
+                                                    name="confirmPassword" placeholder="Confirmar contraseña" required
+                                                    title="Las contraseñas deben coincidir" autocomplete="new-password">
                                                 <label for="confirmPassword">
                                                     <i class="bi bi-lock-fill me-1"></i>Confirmar Contraseña
                                                 </label>
@@ -304,6 +377,176 @@
             </div>
         </div>
     </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 ">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Información de la empresa -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <img src="/assets/img/Logo.png" alt="TechStore" class="bi bi-shop me-2" height="100"
+                            width="100">DevHub
+                    </h5>
+                    <p class="text-light-emphasis">
+                        Proyecto realizado por el equipo de trabajo de Rolling Code integrantes del grupo 5.
+                        Alexis, Miguel, Juana,Luciano.
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3 fs-4">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-light me-3 fs-4">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-light me-3 fs-4">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-light fs-4">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Columna 2: Enlaces útiles -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-light-emphasis text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Comunidad
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-light-emphasis text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Guías & Tutoriales
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-light-emphasis text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Política de Privacidad
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-light-emphasis text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Preguntas Frecuentes
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-light-emphasis text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Soporte Técnico
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Columna 3: Contacto y Newsletter -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+                    <h5 class="fw-bold mb-3">Contacto</h5>
+                    <div class="mb-3">
+                        <p class="mb-2">
+                            <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                            25 de Mayo 455, San Miguel de Tucumán, Argentina
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                            +54 11 1234-5678
+                        </p>
+                        <p class="mb-3">
+                            <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                            devhub@enterprise.com
+                        </p>
+                    </div>
+
+                    <h6 class="fw-bold mb-2">Newsletter</h6>
+                    <p class="small text-light-emphasis mb-3">
+                        Suscríbete para recibir ofertas exclusivas
+                    </p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Escribe tu email...">
+                        <button class="btn btn-primary" type="submit">Enviar
+
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="my-2 border-secondary">
+
+            <!-- Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12 text-center text-md-start">
+                    <p class="mb-0 text-light-emphasis">
+                        &copy; Proyecto Desarollo Web - Rolling Code 2025.
+                    </p>
+                </div>
+                <div class="col-md-6 col-12 text-center text-md-end">
+                    <small class="text-light-emphasis">
+                        Desarrollado por <strong class="text-primary">Grupo 5 - Rolling Code</strong>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0 text-center">
+                    <div class="w-100 mb-3">
+                        <h1 class="fw-bold mb-0 fs-4 justify-content-center d-flex mb-3  modal-title">
+                            Bienvenido a DevHub &lt;/&gt;
+                        </h1>
+                        <p class="text-muted mb-0 text-center">Inicia sesión para continuar</p>
+                    </div>
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingInput"
+                                placeholder="name@example.com" autofocus />
+                            <label for="floatingInput">Dirección de correo electrónico</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                placeholder="Password" />
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+                        <div class="form-check m-3 text-start text-muted">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label modal-title" for="gridCheck">
+                                Recordarme
+                            </label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-primary rounded-3 btn-primary btn-lg fw-bold" type="submit">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Iniciar sesión
+                        </button>
+                        <h2 class="fs-5 fw-bold mb-3 text-center">ó</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3" type="button">
+                            <i class="bi bi-google"></i>
+                            Continuar con Google
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="button">
+                            <i class="bi bi-facebook"></i>
+                            Continuar con Facebook
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="button">
+                            <i class="bi bi-github"></i>
+                            Continuar con Github
+                        </button>
+                    </form>
+                    <p class="text-muted mt-3">¿Aún no tienes una cuenta?</p>
+                    <p><a href="#" class="text-primary">Regístrate aquí</a></p>
+                    <a href="#" class="text-decoration-none text-primary">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

@@ -15,7 +15,7 @@
   --primary-black: #2b2929;
   --warm-white: #faf9f6;
   
-  /* Sistema de fuentes dual */
+  
   --font-opensauce: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
   --font-segoe: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -30,13 +30,13 @@ body {
 }
 
 /* Open Sauce para navegación */
-.navbar,
+/* .navbar,
 .navbar-brand,
 .nav-link,
 .dropdown-item,
 .navbar-text {
   font-family: var(--font-opensauce);
-}
+} */
 
 /* Open Sauce para footer completo */
 footer,
@@ -72,16 +72,16 @@ p:not(.navbar-brand),
 }
 
 /* Clases auxiliares */
-.font-opensauce { font-family: var(--font-opensauce); }
+/* .font-opensauce { font-family: var(--font-opensauce); }
 .font-segoe { font-family: var(--font-segoe); }
-
-.navbar-brand {
+ */
+/* .navbar-brand {
   color: var(--primary-blue) !important;
-}
-h1 strong {
+} */
+/* h1 strong {
   color: var(--strong-blue);
   font-weight: 700;
-}
+} */
 .bg-light {
   background-color: var(--warm-white) !important;
 }
@@ -113,16 +113,16 @@ h1 strong {
 .text-danger {
   color: var(--strong-blue) !important;
 }
-.btn-primary {
+/* .btn-primary {
   background-color: var(--primary-violet);
   border-color: var(--primary-violet);
   color: var(--warm-white);
-}
-.btn-primary:hover {
+} */
+/* .btn-primary:hover {
   background-color: var(--strong-blue);
   border-color: var(--strong-blue);
   color: var(--warm-white);
-}
+} */
 .bg-white {
   background-color: var(--warm-white) !important;
 }
@@ -143,18 +143,18 @@ h1 strong {
 /* ========================================= */
 
 /* Navbar con color oscuro (consistente con carrito) */
-.navbar {
+/* .navbar {
   background-color: #212529 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+} */
 
-.navbar-custom {
+/* .navbar-custom {
   padding: 0.5rem 0;
   min-height: 50px;
-}
+} */
 
 
-.navbar-brand.p {
+/* .navbar-brand.p {
   margin: auto;
   background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
   -webkit-background-clip: text;
@@ -162,22 +162,22 @@ h1 strong {
   background-clip: text;
   padding-right: 10px;
   font-weight: 700;
-}
-.navbar-brand:hover,
+} */
+/* .navbar-brand:hover,
 .navbar-brand:focus {
   color: var(--strong-blue) !important; /* Hover en azul fuerte */
-}
 
-.navbar-nav .nav-link {
+
+/* .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
-}
-
+} */ */
+/* 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
   color: white !important;
-}
+} */
 
-.navbar-nav .nav-link.active {
+/* .navbar-nav .nav-link.active {
   color: white !important;
   font-weight: 500;
 }
@@ -199,7 +199,7 @@ h1 strong {
   font-size: 1.2rem;
 }
 
-/* Botones en navbar */
+
 .navbar .btn-primary {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
@@ -209,10 +209,10 @@ h1 strong {
 .navbar .btn-primary:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 /* Formularios en navbar */
-.navbar .form-control {
+/* .navbar .form-control {
   border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
@@ -227,7 +227,7 @@ h1 strong {
 .navbar .form-control::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-
+ */
 footer {
   background: var(--warm-white);
   color: var(--primary-black);
@@ -395,8 +395,8 @@ footer {
 }
 
 .btn-buy-main {
-  background-color: var(--primary-violet);
-  border-color: var(--primary-violet);
+ /*  background-color: var(--primary-violet); */
+/*   border-color: var(--primary-violet); */
   padding: 0.8rem 1.8rem; /* Botón más pequeño */
   font-size: 1rem; /* Texto más pequeño */
   font-weight: 600;
@@ -407,10 +407,10 @@ footer {
   display: block; /* Asegurar centrado */
 }
 
-.btn-buy-main:hover {
+/* .btn-buy-main:hover {
   background-color: var(--strong-blue);
   border-color: var(--strong-blue);
-}
+} */
 
 /* Elementos de la Parte Derecha */
 .description-title {

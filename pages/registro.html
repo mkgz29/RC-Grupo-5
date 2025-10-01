@@ -46,19 +46,19 @@
                                 Categorias
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../index.html"> Python & Data Science</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> JavaScript & React</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> Full Stack Development</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> UX/UI Design</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> Desarrollo Mobile</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> DevOps & Cloud</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> Ciberseguridad</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> Bases de Datos</a></li>
+                                <li><a class="dropdown-item" href="../pages/producto-html.html"> Html & CSS</a></li>
+                                <li><a class="dropdown-item" href="../pages/producto-js.html"> JavaScript & React</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Full Stack Development</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> UX/UI Design</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Desarrollo Mobile</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> DevOps & Cloud</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Ciberseguridad</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Bases de Datos</a></li>
                                 <li>
-                                    <hr class="dropdown-divider" />
+                                    <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="../index.html"> Preguntas Frecuentes</a></li>
-                                <li><a class="dropdown-item" href="../index.html"> Certificaciones</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="../pages/404.html"> Certificaciones</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -66,7 +66,7 @@
                                 Sesión</a>
                         </li>
                         <li class="nav-item letter">
-                            <a class="nav-link susbrayado" href="./registro.html">Registrarse</a>
+                            <a class="nav-link susbrayado active" href="./registro.html">Registrarse</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -75,9 +75,8 @@
                     </form>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="../assets/icons/buycarrito.png"
+                            <a class="nav-link" href="./carrito.html"><img src="../assets/icons/buycarrito.png"
                                     alt="Carrito de compras" width="43" height="40"></a>
-
                         </li>
 
                     </ul>
@@ -98,7 +97,7 @@
                         <p class=" mb-0 text-center text-primary fs-3 fw-bold">
                             Crea tu cuenta en DevHub
                         </p>
-                        <form action="procesar_contacto.php" method="POST" autocomplete="on" class="p-1">
+                        <form action="procesar_registro.php" method="POST" autocomplete="on" class="p-1" id="registroForm">
                             <fieldset>
                                 <legend class="col-form-label mb-2 text-center text-white">
                                     Completa tu registro para comenzar a aprender
@@ -339,10 +338,10 @@
                                             <input class="form-check-input" type="checkbox" id="terminos" required="">
                                             <label class="form-check-label" for="terminos">
                                                 <i class="bi bi-file-text me-1"></i>
-                                                Acepto los <a href="#" class="text-decoration-none fw-semibold">Términos
-                                                    de Servicio</a> <!--404 Aqui-->
-                                                y la <a href="#" class="text-decoration-none fw-semibold">Política de
-                                                    Privacidad</a> <!--404 Aqui-->
+                                                Acepto los <a href="./404.html" class="text-decoration-none fw-semibold">Términos
+                                                    de Servicio</a>
+                                                y la <a href="./404.html" class="text-decoration-none fw-semibold">Política de
+                                                    Privacidad</a>
                                             </label>
                                             <div class="invalid-feedback">
                                                 Debes aceptar los términos para continuar
@@ -372,7 +371,7 @@
                                     data-bs-target="#loginModal">Inicia sesión</a><br />
                             </p>
                             <p class="mb-2 text-center">
-                                <a href="#">Olvidé mi contraseña</a> <!--404 Aqui-->
+                                <a href="./404.html">Olvidé mi contraseña</a>
                             </p>
                         </form>
                     </div>
@@ -381,65 +380,65 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer class="bg-dark text-light py-3 ">
+    <footer class="bg-dark text-light py-3 mt-3">
         <div class="container">
             <div class="row">
-                <!-- Columna 1: Información de la empresa -->
-                <div class="col-lg-4 col-md-4 col-12 mb-4">
-                    <h5 class="fw-bold mb-3">
-                        <img src="/assets/img/Logo.png" alt="TechStore" class="bi bi-shop me-2" height="100"
-                            width="100">DevHub
-                    </h5>
-                    <p class="text-light-emphasis">
-                        Proyecto realizado por el equipo de trabajo de Rolling Code integrantes del grupo 5.
-                        Alexis, Miguel, Juana,Luciano.
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3 fs-4">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="text-light me-3 fs-4">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="#" class="text-light me-3 fs-4">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="#" class="text-light fs-4">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Columna 2: Enlaces útiles -->
+                <!-- Columna 1: Enlaces Útiles -->
                 <div class="col-lg-4 col-md-4 col-12 mb-4">
                     <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-light-emphasis text-decoration-none">
+                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
                                 <i class="bi bi-chevron-right me-2"></i>Comunidad
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-light-emphasis text-decoration-none">
+                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
                                 <i class="bi bi-chevron-right me-2"></i>Guías & Tutoriales
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-light-emphasis text-decoration-none">
+                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
                                 <i class="bi bi-chevron-right me-2"></i>Política de Privacidad
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-light-emphasis text-decoration-none">
+                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
                                 <i class="bi bi-chevron-right me-2"></i>Preguntas Frecuentes
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-light-emphasis text-decoration-none">
+                            <a href="./404.html" class="text-light-emphasis text-decoration-none">
                                 <i class="bi bi-chevron-right me-2"></i>Soporte Técnico
                             </a>
                         </li>
                     </ul>
                 </div>
-                <!-- Columna 3: Contacto y Newsletter -->
+
+                <!-- Columna 2: Social Links -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4 text-center">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="text-light me-3 fs-4 social-link">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-light me-3 fs-4 social-link">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-light me-3 fs-4 social-link">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-light fs-4 social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="mt-3">
+                        <img src="../assets/img/Logo.png" alt="DevHub Logo" height="60" width="60" class="mb-2">
+                        <p class="small text-light-emphasis">DevHub - Aprende Programación</p>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Contacto -->
                 <div class="col-lg-4 col-md-4 col-12 mb-4">
                     <h5 class="fw-bold mb-3">Contacto</h5>
                     <div class="mb-3">
@@ -453,18 +452,17 @@
                         </p>
                         <p class="mb-3">
                             <i class="bi bi-envelope-fill me-2 text-primary"></i>
-                            devhub@enterprise.com
+                            devhub@rollingcode.com
                         </p>
                     </div>
-
                     <h6 class="fw-bold mb-2">Newsletter</h6>
                     <p class="small text-light-emphasis mb-3">
                         Suscríbete para recibir ofertas exclusivas
                     </p>
                     <form class="d-flex">
-                        <input type="email" class="form-control me-2" placeholder="Escribe tu email...">
-                        <button class="btn btn-primary" type="submit">Enviar
-
+                        <input type="email" class="form-control me-2" placeholder="Tu email...">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-send"></i>
                         </button>
                     </form>
                 </div>
@@ -476,12 +474,12 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-12 text-center text-md-start">
                     <p class="mb-0 text-light-emphasis">
-                        &copy; Proyecto Desarollo Web - Rolling Code 2025.
+                        &copy; 2025 Rolling Code - Grupo 5. Todos los derechos reservados.
                     </p>
                 </div>
                 <div class="col-md-6 col-12 text-center text-md-end">
                     <small class="text-light-emphasis">
-                        Desarrollado por <strong class="text-primary">Grupo 5 - Rolling Code</strong>
+                        Desarrollado con  por <strong class="text-primary">Equipo DevHub</strong>
                     </small>
                 </div>
             </div>
@@ -542,8 +540,8 @@
                         </button>
                     </form>
                     <p class="text-muted mt-3">¿Aún no tienes una cuenta?</p>
-                    <p><a href="#" class="text-primary">Regístrate aquí</a></p>
-                    <a href="#" class="text-decoration-none text-primary">
+                    <p><a href="./registro.html" class="text-primary">Regístrate aquí</a></p>
+                    <a href="./404.html" class="text-decoration-none text-primary">
                         ¿Olvidaste tu contraseña?
                     </a>
                 </div>

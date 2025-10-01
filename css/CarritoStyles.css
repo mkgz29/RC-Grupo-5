@@ -5,52 +5,25 @@
 /* Importar fuente personalizada */
 @import url("https://db.onlinewebfonts.com/c/cdf9e1a785f6767291f7e12174be6174?family=Open+Sauce+One+Regular");
 
-/* ========================================= */
-/* VARIABLES CSS GLOBALES                   */
-/* ========================================= */
+
 
 :root {
   --header-bg: #6c7b8a;
   --page-title-bg: #9ca3af;
   --primary-blue: #6366f1;
   
-  /* Sistema de fuentes dual */
+  
   --font-opensauce: 'Open Sauce One Regular', system-ui, -apple-system, sans-serif;
   --font-segoe: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ========================================= */
-/* CONFIGURACIÓN GLOBAL                     */
-/* ========================================= */
 
-/* Configuración base con Segoe UI */
 body {
   font-family: var(--font-segoe);
   scroll-behavior: smooth;
 }
 
-/* ========================================= */
-/* SISTEMA DE FUENTES DUAL                  */
-/* ========================================= */
 
-/* Open Sauce para navegación */
-.navbar,
-.navbar-brand,
-.nav-link,
-.dropdown-item,
-.navbar-text {
-  font-family: var(--font-opensauce);
-}
-
-/* Open Sauce para footer completo */
-footer,
-footer h5,
-footer h6,
-footer p,
-footer a,
-footer li {
-  font-family: var(--font-opensauce);
-}
 
 /* Open Sauce para títulos y destacados */
 h1, h2, h3, h4, h5, h6,
@@ -77,40 +50,14 @@ h1, h2, h3, h4, h5, h6,
 .font-opensauce { font-family: var(--font-opensauce); }
 .font-segoe { font-family: var(--font-segoe); }
 
-/* ========================================= */
-/* COMPONENTES PERSONALIZADOS               */
-/* ========================================= */
 
-/* Header personalizado */
-.header-custom {
-  background-color: var(--header-bg) !important;
-}
-
-.page-title-custom {
-  background-color: var(--page-title-bg) !important;
-}
-
-/* ========================================= */
-/* COMPONENTES PERSONALIZADOS              */
-/* ========================================= */
-
-/* Botones personalizados */
-.btn-primary-custom {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
-}
-
-.btn-primary-custom:hover {
-  background-color: #5338f5;
-  border-color: #5338f5;
-}
 
 /* Placeholders de productos */
 .product-image-placeholder {
   background-color: #e5e7eb;
   color: #9ca3af;
   font-size: 1.5rem;
-}
+} */
 
 .course-image-placeholder {
   transition: transform 0.2s ease-in-out;
@@ -134,108 +81,6 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ========================================= */
-/* NAVBAR PERSONALIZADO                     */
-/* ========================================= */
-
-/* Navbar con color oscuro (igual que footer) */
-.navbar {
-  background-color: #212529 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1020;
-  padding: 0.5rem 0;
-}
-
-.navbar-brand {
-  color: white !important;
-  font-weight: 600;
-}
-
-.navbar-brand:hover {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* Estilo específico para el texto DevHub */
-.navbar-brand.p {
-  margin: auto;
-  background: linear-gradient(180deg, #7a44fa 20%, #3B82F6 50%, #0EA5E9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-right: 10px;
-  font-weight: 700;
-}
-
-.navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: white !important;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.navbar-nav .nav-link.active {
-  color: white !important;
-  font-weight: 500;
-}
-
-/* Efecto hover para el enlace "Registrarse" */
-.letter:hover {
-  color: rgba(0, 136, 255, 0.677) !important;
-  text-shadow: #0EA5E9 2px 2px 25px;
-}
-
-/* Estilo para subrayado */
-.susbrayado {
-  text-decoration: underline;
-}
-
-.navbar .btn-primary {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
-.navbar .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-}
-
-
-/* Formularios en navbar */
-.navbar .form-control {
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.navbar .form-control:focus {
-  border-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-}
-
-.navbar .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* ========================================= */
-/* MEJORAS UX E INTERACCIONES              */
-/* ========================================= */
 
 /* Tipografía y elementos visuales */
 .card {
@@ -262,16 +107,6 @@ body {
   padding-top: 70px;
 }
 
-/* Mejoras para iconos y botones */
-.btn-primary {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
-}
-
-.btn-primary:hover {
-  background-color: #5338f5;
-  border-color: #5338f5;
-}
 
 /* Badge del carrito */
 .badge {

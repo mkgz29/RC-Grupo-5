@@ -9,7 +9,7 @@
 </head>
 <body>
   <section class="position-relative vh-100 overflow-hidden">
-  <img class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" src="fondo.PNG" alt="Fondo canva">
+  <img class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" src="bg-categoria.PNG" alt="Fondo canva">
   <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
   <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative">
     <h1 class="display-3 fw-bold">Bienvenido a Nuestra Tienda</h1>
@@ -21,15 +21,16 @@
   <div class="row">
     <aside class="col-md-3 d-none d-md-block">
       <nav class="list-group" id="category-tab" role="tablist">
-        <button class="list-group-item list-group-item-action active" data-bs-toggle="tab" data-bs-target="#cat1">Categoría 1</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat2">Categoría 2</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 3</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Categoría 4</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 5</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 6</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 7</button>
-        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 8</button>
-        <button class="list-group-item list-group-item-action">Categoría 9</button>
+        <button class="list-group-item list-group-item-action active" data-bs-toggle="tab" data-bs-target="#cat1">Python & Data Science</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat2">JavaScript & React</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Full Stack Development</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">UX/Ul Design</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Desarrollo Mobile</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">DevOps & Cloud</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Ciberseguridad</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Bases de Datos</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Preguntas Frecuentes</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Certificaciones</button>
       </nav>
     </aside>
     <section class="d-md-none text-end mb-3">
@@ -40,76 +41,153 @@
     <section class="col-md-9 tab-content" id="category-tabContent">
       
       <!-- Cat 1 -->
-      <article class="tab-pane fade show active" id="cat1">
-        <div class="row g-3">
-          <article class="col-sm-6 col-lg-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h5>Producto 1</h5>
-                <p>Descripción breve.</p>
-                <button class="btn btn-primary">Agregar</button>
+      <section class="tab-pane fade show active" id="cat1" role="tabpanel">
+          <div class="row g-3">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="card5.jpg" class="card-img-top" alt="Python Básico">
+                <div class="card-body">
+                  <h5 class="card-title">Python Básico</h5>
+                  <p class="card-text">Aprendé las bases de Python desde cero, ideal para principiantes.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
               </div>
             </div>
-          </article>
-          <article class="col-sm-6 col-lg-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 2">
-              <div class="card-body">
-                <h5>Producto 2</h5>
-                <p>Descripción breve.</p>
-                <button class="btn btn-primary">Agregar</button>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="data-science.PNG" class="card-img-top" alt="Data Science">
+                <div class="card-body">
+                  <h5 class="card-title">Introducción a Data Science</h5>
+                  <p class="card-text">Descubrí cómo trabajar con datos, desde limpieza hasta análisis inicial.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
               </div>
             </div>
-          </article>
-        </div>
-      </article>
-
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="machine-learning.PNG" class="card-img-top" alt="Machine Learning">
+                <div class="card-body">
+                  <h5 class="card-title">Machine Learning</h5>
+                  <p class="card-text">Modelos predictivos y técnicas de aprendizaje automático con Python.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="analisis-datos.PNG" class="card-img-top" alt="Análisis de Datos">
+                <div class="card-body">
+                  <h5 class="card-title">Análisis de Datos</h5>
+                  <p class="card-text">Trabajá con pandas y numpy para analizar grandes volúmenes de datos.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="visualizacion-datos.PNG" class="card-img-top" alt="Visualización de Datos">
+                <div class="card-body">
+                  <h5 class="card-title">Visualización de Datos</h5>
+                  <p class="card-text">Creá gráficos claros y atractivos con matplotlib y seaborn.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="inteligencia-artificial.PNG" class="card-img-top" alt="IA con Python">
+                <div class="card-body">
+                  <h5 class="card-title">Inteligencia Artificial con Python</h5>
+                  <p class="card-text">Explorá redes neuronales y aplicaciones prácticas de IA.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       <!-- Cat 2 -->
-      <article class="tab-pane fade" id="cat2">
-        <div class="row g-3">
-          <article class="col-sm-6 col-lg-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/150/ff0000" class="card-img-top" alt="Producto 3">
-              <div class="card-body">
-                <h5>Producto 3</h5>
-                <p>Descripción breve.</p>
-                <button class="btn btn-primary">Agregar al carrito</button>
+       <section class="tab-pane fade" id="cat2" role="tabpanel">
+         <div class="row g-3">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="card1.jpg" class="card-img-top" alt="JavaScript Básico">
+                <div class="card-body">
+                  <h5 class="card-title">JavaScript Básico</h5>
+                  <p class="card-text">Aprendé desde variables y funciones hasta lógica de programación web.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
               </div>
             </div>
-          </article>
-        </div>
-      </article>
-
-      <!-- Cat 3 -->
-      <article class="tab-pane fade" id="cat3">
-        <div class="row g-3">
-          <article class="col-sm-6 col-lg-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/150/00ff00" class="card-img-top" alt="Producto 4">
-              <div class="card-body">
-                <h5>Producto 4</h5>
-                <p>Descripción breve.</p>
-                <button class="btn btn-primary">Agregar</button>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="dom.PNG" class="card-img-top" alt="DOM">
+                <div class="card-body">
+                  <h5 class="card-title">Manipulación del DOM</h5>
+                  <p class="card-text">Dinamizá tus páginas web con eventos, nodos y funciones prácticas.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
               </div>
             </div>
-          </article>
-        </div>
-      </article>
-    </section>
-  </div>
-</main>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="basic-react.PNG" class="card-img-top" alt="React Básico">
+                <div class="card-body">
+                  <h5 class="card-title">React Básico</h5>
+                  <p class="card-text">Componentes, props y estados para arrancar en el mundo de React.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="advance-react.PNG" class="card-img-top" alt="React Avanzado">
+                <div class="card-body">
+                  <h5 class="card-title">React Avanzado</h5>
+                  <p class="card-text">Hooks, context API y buenas prácticas en aplicaciones complejas.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="fullstack.PNG" class="card-img-top" alt="FullStack">
+                <div class="card-body">
+                  <h5 class="card-title">FullStack con React</h5>
+                  <p class="card-text">Desde frontend en React hasta backend con Node.js y bases de datos.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100">
+                <img src="testing.PNG" class="card-img-top" alt="Testing con JS">
+                <div class="card-body">
+                  <h5 class="card-title">Testing con JavaScript</h5>
+                  <p class="card-text">Probá tus aplicaciones con Jest y buenas prácticas de testing.</p>
+                  <a href="carrito.html" class="btn btn-primary mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<!-- Offcanvas en móvil -->
+<!-- Telefono -->
 <aside class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategories">
   <header class="offcanvas-header">
     <h5>Filtrar categorías</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </header>
   <nav class="offcanvas-body list-group">
-    <button class="list-group-item list-group-item-action active" data-bs-toggle="tab" data-bs-target="#cat1">Categoría 1</button>
-    <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat2">Categoría 2</button>
-    <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Categoría 3</button>
+    <button class="list-group-item list-group-item-action active" data-bs-toggle="tab" data-bs-target="#cat1">Python & Data Science</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat2">JavaScript & React</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat3">Full Stack Development</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">UX/Ul Design</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Desarrollo Mobile</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">DevOps & Cloud</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Ciberseguridad</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Bases de Datos</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Preguntas Frecuentes</button>
+        <button class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#cat4">Certificaciones</button>
   </nav>
 </aside>
 </section>
